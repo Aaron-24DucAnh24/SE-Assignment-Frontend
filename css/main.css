@@ -1,0 +1,10 @@
+.link{
+    text-decoration: none;
+    width: 100px;
+    height: 60px;
+    background-color: aquamarine;
+    box-shadow: 0 0 5 black;
+    margin: 12px;
+    color: black;
+    justify-self: center;
+}
