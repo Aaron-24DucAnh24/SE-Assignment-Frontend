@@ -26,6 +26,7 @@ html {
 .body {
     display: flex;
     width: 480px;
+    background-image: url(/img/login-img.webp);
 }
 
 .footer {
