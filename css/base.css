@@ -19,7 +19,8 @@ html {
 
 .header {
     display: flex;
-    height: 60px;
+    padding-top: 12px;
+    height: 100px;
 }
 
 .body {

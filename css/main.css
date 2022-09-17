@@ -1,10 +1,14 @@
 .link{
+    display: block;
     text-decoration: none;
-    width: 100px;
-    height: 60px;
+    width: 200px;
+    height: 100px;
     background-color: aquamarine;
     box-shadow: 0 0 5 black;
     margin: 12px;
     color: black;
     justify-self: center;
+    font-size: 2rem;
+    align-items: center;
+    padding: 12px;
 }
