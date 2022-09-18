@@ -222,7 +222,6 @@
 }
 
 /* Mobile css */
-
 @media screen and (max-width: 740px) {
     .body{
         width: calc(100% - 18px);
