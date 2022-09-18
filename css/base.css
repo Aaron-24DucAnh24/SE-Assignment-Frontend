@@ -1,8 +1,13 @@
+:root {
+    --primary-color: rgb(110,139,255);
+}
+
 * {
     padding: 0;
     border: 0;
     margin: 0;
     box-sizing: inherit;
+    line-height: 1.6;
 }
 
 html {
@@ -13,20 +18,46 @@ html {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clickable {
+    cursor: pointer !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .wrapper {
-    background-color: rgb(200, 192, 192);
+    background-color: rgb(245,245,249);
+    display: flex;
+    justify-content: center;
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    padding-top: 12px;
-    height: 100px;
-}
-
-.body {
-    display: flex;
-    width: 480px;
-    background-image: url(/img/login-img.webp);
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 32px;
+    box-shadow: 0 0 4px silver;
 }
 
 .footer {

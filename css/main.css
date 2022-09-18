@@ -1,14 +1,100 @@
-.link{
-    display: block;
-    text-decoration: none;
-    width: 200px;
-    height: 100px;
-    background-color: aquamarine;
-    box-shadow: 0 0 5 black;
-    margin: 12px;
-    color: black;
-    justify-self: center;
-    font-size: 2rem;
+/* Header css */
+
+.header__title {
+    display: flex;
     align-items: center;
-    padding: 12px;
+    height: 100%;
+    color: #000;
+    font-size: 2.0rem;
+    padding: 6px 24px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px silver;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background-color: rgb(237, 231, 231);
 }
+
+.nav {
+    font-size: 2rem;
+    height: 100%;
+}
+
+.nav:hover > a {
+    background-color: silver;
+}
+
+.nav:hover .nav-list {
+    display: flex;
+}
+
+.nav a{
+    position: relative;
+    height: 100%;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    padding-left: 4px;
+}
+
+.nav-list {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 4px #333;
+    z-index: 999;
+    animation: fadeIn 0.3s;
+    width: 126px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: left;
+    height: 45px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.nav-item:hover {
+    background-color: silver;
+}
+
+/* body css */
+/* ///////////////////////////////////////// */
+
+.body {
+    display: flex;
+    justify-self: center;
+    width: 60%;
+    height: 500px;
+    box-shadow: 0 0 5px rgb(64, 64, 80);
+    margin-top: 100px;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: contain;
+}
+
+.authen-section, .slider-section {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.authen-section {
+    background-color: var(--primary-color);
+}
+
+.slider-section {
+    background-color: rgba(229,235,244, 0.8);
+}
+
+/* footer css */
+/* /////////////////////////////// */
+
