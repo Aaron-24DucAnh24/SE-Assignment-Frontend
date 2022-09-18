@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UWC 2.0</title>
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
 </head>
 <body>
     <div class="wrapper">
@@ -26,10 +26,27 @@
 
         <div class="body">
             <div class="authen-section">
-
+                <div class="authen__wrap">
+                    <div class="authen__label">Đăng nhập vào hệ thống</div>
+                    <div class="authen__desc">Sử dụng <i>Tên đăng nhập</i> và <i>Mật khẩu</i> được cung cấp</div>
+                    <form action="" class="authen__form">
+                        <div class="authen__input-wrap">
+                            <input maxlength="124" type="text" class="authen__input" placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="authen__input-wrap authen__input-wrap--password">
+                            <input type="password" maxlength="16" class="authen__input authen__password-input" placeholder="Mật khẩu">
+                            <label class="authen__input-icon clickable" for="password-swicher"><i class="ti-eye"></i></label>
+                            <input type="checkbox" id="password-swicher" style="display: none;" onclick="passwordSwitch()">
+                        </div>
+                        <div class="authen__forgot-wrap"><a class="authen__forgot clickable">Quên thông tin đăng nhập?</a></div>
+                        <button class="authen__btn">Đăng nhập</button>
+                    </form>
+                </div>
             </div>
             <div class="slider-section">
-
+                <img src="./img/slide1.png" alt="" class="slide">
+                <img src="./img/slide2.webp" alt="" class="slide">
+                <img src="./img/slide3.png" alt="" class="slide">
             </div>
         </div>
 
@@ -48,5 +65,7 @@
             </div>
         </div>
     </div>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
