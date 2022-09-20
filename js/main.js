@@ -13,7 +13,7 @@ setInterval(function() {
 
 // password witching----------------------------
 
-var passwordInput = document.querySelector(".authen__password-input")
+var passwordInput = document.querySelector(".authen__password")
 function passwordSwitch() {
     if(passwordInput.type === 'password') {
         passwordInput.type = 'text'
@@ -21,3 +21,5 @@ function passwordSwitch() {
         passwordInput.type = 'password'
     }
 }
+
+// authentication handling
