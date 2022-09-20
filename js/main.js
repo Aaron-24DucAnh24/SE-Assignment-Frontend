@@ -23,3 +23,5 @@ function passwordSwitch() {
 }
 
 // authentication handling
+
+var loginNameInput = document.querySelector('.authen__login-name')

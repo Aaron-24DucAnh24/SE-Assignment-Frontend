@@ -117,7 +117,7 @@
 }
 
 .authen__input-wrap {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
     height: 100px;
     width: 100%;
     border-radius: 5px;
@@ -129,7 +129,7 @@
 
 .authen__input-icon {
     position: absolute;
-    top: 18px;
+    top: 35px;
     right: 10px;
     width: 32px;
     height: 32px;
@@ -173,6 +173,7 @@
     color: rgb(136, 255, 0);
     width: 50%;
     height: 100%;
+    min-width: 180px;
 }
 
 .authen__btn {
@@ -227,6 +228,10 @@
         width: calc(100% - 18px);
     }
    
+    .authen__wrap {
+        padding: 16px;
+    }
+
     .authen-section {
         flex: 1;
     }
@@ -249,5 +254,15 @@
 
     .authen__desc {
         font-size: 1.2rem;
+    }
+
+    .authen__input {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .authen__input-icon {
+        height: 40px;
+        width: 40px;
     }
 }
