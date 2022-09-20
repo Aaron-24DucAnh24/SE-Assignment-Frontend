@@ -1,5 +1,4 @@
-
-// slide handling
+// slide handling--------------------------------
 
 const slides = document.querySelectorAll('.slide')
 var i = 1
@@ -12,7 +11,7 @@ setInterval(function() {
     if(i > 2) i = 0
 }, 5000);
 
-// password witching
+// password witching----------------------------
 
 var passwordInput = document.querySelector(".authen__password-input")
 function passwordSwitch() {
