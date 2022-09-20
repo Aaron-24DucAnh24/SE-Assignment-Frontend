@@ -203,7 +203,7 @@
 }
 
 /* Tablet css */
-@media screen and (min-width: 741px) and (max-width: 1024px){
+@media screen and (min-width: 741px) and (max-width: 1023px){
     .body{
         width: calc(100% - 18px);
     }
