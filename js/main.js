@@ -25,3 +25,13 @@ function passwordSwitch() {
 // authentication handling
 
 var loginNameInput = document.querySelector('.authen__login-name')
+var loginNameValue
+var passwordValue
+
+loginNameInput.oninput = function(e) {
+    loginNameValue = e.target.value
+}
+
+passwordInput.oninput = function(e) {
+    passwordValue = e.target.value
+}
