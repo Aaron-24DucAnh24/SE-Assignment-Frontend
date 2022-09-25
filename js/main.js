@@ -24,6 +24,7 @@ function passwordSwitch() {
 
 // authentication handling
 
+var submitBtn = document.querySelector('.authen__btn')
 var loginNameInput = document.querySelector('.authen__login-name')
 var loginNameValue
 var passwordValue
@@ -34,4 +35,8 @@ loginNameInput.oninput = function(e) {
 
 passwordInput.oninput = function(e) {
     passwordValue = e.target.value
+}
+
+submitBtn.onclick = function(e) {
+    
 }
