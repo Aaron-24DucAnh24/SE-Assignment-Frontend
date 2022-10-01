@@ -128,16 +128,13 @@
 }
 
 .authen__input-icon {
+    opacity: 0.6;
     position: absolute;
     top: 35px;
     right: 10px;
     width: 32px;
     height: 32px;
     font-size: 2.5rem;
-}
-
-.authen__input-icon:active {
-    scale: 50%;
 }
 
 .authen__input {
