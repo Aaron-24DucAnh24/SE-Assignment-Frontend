@@ -2,64 +2,16 @@
 .header__title {
     display: flex;
     align-items: center;
+    width: 145px;
     height: 100%;
     color: #fff;
     font-size: 2.0rem;
     padding: 6px 24px;
     border-radius: 5px;
-    box-shadow: 0 0 4px silver;
+    box-shadow: 0 0 5px rgb(64 64 80);
     font-weight: 700;
     letter-spacing: 2px;
     background-color: var(--primary-color-1);
-}
-
-.nav {
-    font-size: 2rem;
-    height: 100%;
-}
-
-.nav:hover > a {
-    background-color: silver;
-}
-
-.nav:hover .nav-list {
-    display: flex;
-}
-
-.nav a{
-    position: relative;
-    height: 100%;
-    color: #333;
-    display: flex;
-    align-items: center;
-    padding: 6px 12px;
-}
-
-.nav-icon {
-    font-size: 1.5rem;
-    padding-left: 4px;
-}
-
-.nav-list {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 0 4px #333;
-    z-index: 999;
-    animation: fadeIn 0.3s;
-    width: 126px;
-}
-
-.nav-item {
-    display: flex;
-    justify-content: left;
-    height: 45px;
-    width: 100%;
-    background-color: #fff;
-}
-
-.nav-item:hover {
-    background-color: silver;
 }
 
 /* body css */
@@ -68,7 +20,7 @@
 .body {
     display: flex;
     justify-self: center;
-    width: 998px;
+    width: 1200px;
     height: 650px;
     box-shadow: 0 0 5px rgb(64, 64, 80);
     margin-top: 100px;
@@ -105,14 +57,14 @@
 .authen__desc {
     font-size: 1.4rem;
     font-style: italic;
-    color: #000;
+    color: #fff;
     padding-bottom: 32px;
     margin-bottom: 32px;
     border-bottom: 1px #fff solid;
 }
 
 .authen__desc i {
-    color: #fff;
+    color: rgb(136, 255, 0);
     font-weight: 600;
 }
 
@@ -202,6 +154,10 @@
 
 /* Tablet css */
 @media screen and (min-width: 741px) and (max-width: 1023px){
+    .header__wrapper {
+        justify-content: center;
+    }
+
     .body{
         width: calc(100% - 18px);
     }
@@ -221,6 +177,10 @@
 
 /* Mobile css */
 @media screen and (max-width: 740px) {
+    .header__wrapper {
+        justify-content: center;
+    }
+
     .body{
         width: calc(100% - 18px);
     }

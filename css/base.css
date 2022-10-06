@@ -56,11 +56,16 @@ ul {
     display: flex;
     height: 55px;
     justify-content: center;
-    align-items: center;
     background-color: #fff;
-    padding: 0 32px;
     box-shadow: 0 0 4px silver;
     z-index: 999;
+}
+
+.header__wrapper {
+    display: flex;
+    width: 1200px;
+    max-width: calc(100% - 16px);
+    height: 100%;
 }
 
 .footer {
