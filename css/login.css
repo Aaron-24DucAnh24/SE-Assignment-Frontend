@@ -110,22 +110,6 @@
     box-shadow: 0 0 5px black;
 }
 
-.authen__forgot-wrap {
-    padding-bottom: 32px;
-    margin-bottom: 32px;
-    border-bottom: 1px #fff solid;
-}
-
-.authen__forgot {
-    font-style: italic;
-    display: block;
-    font-size: 1.4rem;
-    color: rgb(136, 255, 0);
-    width: 50%;
-    height: 100%;
-    min-width: 180px;
-}
-
 .authen__btn {
     width: 60%;
     height: 60px;
