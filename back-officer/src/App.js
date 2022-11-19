@@ -6,8 +6,8 @@ function App() {
     return (
         <div>
             <Header />
-            <ListDisplay />
             <DetailInfor />
+            <ListDisplay />
         </div>
     );
 }

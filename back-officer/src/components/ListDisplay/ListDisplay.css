@@ -1,0 +1,70 @@
+:root {
+    --color-main-blue: rgb(110, 139, 255);
+    --color-main-green: rgba(0, 225, 178, 0.55);
+    --color-select-card-name: rgb(32, 126, 242);
+    --color-card-name: #7EAEEA;
+    --color-select-card-background: rgb(218, 222, 227);
+    --color-select-tab: rgb(217, 234, 255);
+    --color-scroll-bar: rgba(70, 137, 200, 0.3);
+    --color-online: rgb(39, 210, 24);
+    --color-offline: rgba(255, 255, 255, 0.39);
+    --color-white: rgb(255, 255, 255);
+}
+
+.tabContainer{
+    background-color: var(--color-select-tab);
+}
+
+.cardBox {
+    background-color: var(--color-white);
+    width: 884px;
+    height: 88px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.cardBox:hover
+{
+    background-color: var(--color-select-card-background);
+    border: 3.5px solid var(--color-main-blue);
+    cursor: pointer;
+}
+
+.cardName {
+    display: flex;
+    /* align-items: center; */
+    width: 410px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 130%;
+    color: var(--color-card-name);
+    margin-left: 45px;
+
+}
+
+.cardStatus {
+    display: flex;
+    width: 234.61px;
+    height: 39.58px;
+    display: inline;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    /* or 31px */
+
+
+    color: rgba(39, 210, 24, 0.83);
+}
+.icon{
+    display: flex;
+    width: 43px;
+    margin-left: 134px;
+
+}
