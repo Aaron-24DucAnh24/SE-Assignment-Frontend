@@ -2,28 +2,34 @@ import React from "react";
 import "./ListDisplay.css";
 import { Card } from "./card"
 
-export const Tab = (prop) => {
+export const Tab = ({ Employee }, TabName) => {
     const showTab = () => {
         console.log("Show detail")
     }
 
-    return (<div className="tab" OnClick={showTab}>
-        {/* Tab navigation */}
-        <div className="tabNav">
-            <span className="tabName">
-                {prop.name}
+    return (<div className="tabBackground" OnClick={showTab}>
+        <div className="tab">
+            {/* Tab navigation */}
+            <div className="tabNav">
+                <span className="tabNav_name">
+                    Nhan vien thu gom
+                </span>
+            </div>
+            {/* Tab Container keep list of all employee, MCP, ect...  */}
+            <div className="tabContainer">
+                <div className="tabContainer_scrollAndCard">
+                    <div className="tabContainer_scroll">
+                        {Employee.map(employee => {
+                            return <Card cardProp={employee} />
+                        })}
 
-            </span>
-        </div>
-    {/* Tab Container keep list of all employee, MCP, ect...  */}
-        <div className="tabContainer">
-            <ul className="cardList">
-                <Card name="Tran Trang Ky Phong" status="Truc Tuyen"/>
-                <Card name="Dang Tien Dat" status="Truc Tuyen"/>
-                <Card name="Huynh Vo Tuan" status="Ngoai Tuyen"/>
+                    </div>
+                </div>
 
-            </ul>
-
+                <button>
+                    Khoi tao
+                </button>
+            </div>
         </div>
     </div>);
 };

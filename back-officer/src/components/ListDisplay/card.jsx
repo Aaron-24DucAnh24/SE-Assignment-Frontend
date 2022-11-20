@@ -2,7 +2,7 @@ import React from "react";
 import "./ListDisplay.css";
 import infoIcon from "./img/infoIcon.png";
 
-export const Card = (prop) => {
+export const Card = ({cardProp}) => {
     const showDetail = () => {
         console.log("Show detail")
     }
@@ -10,11 +10,11 @@ export const Card = (prop) => {
 
     return (<div className="cardBox" OnClick={showDetail}>
         <div className="cardName">
-            {prop.name}
+            {cardProp.name}
         </div>
 
         <div className="cardStatus">
-            {prop.status}
+            {cardProp.status == true ? <span id="online">Online</span> : "Offline"}
         </div>
 
         <img src={infoIcon} className="icon"></img>
@@ -22,3 +22,4 @@ export const Card = (prop) => {
 
     </div>);
 };
+

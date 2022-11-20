@@ -1,14 +1,17 @@
 import React from "react";
 import { Tab } from "./tab";
 import "./ListDisplay.css";
+import { Card } from "./card";
 
 
-const ListDisplay = () => {
+const ListDisplay = ({Employee}) => {
+    
     // TODO Phong
     return <div>
-            <Tab/>
-        </div>
-    
+        <Tab Employee={Employee} TabName="Nhan Vien Thu gom"/>
+        
+    </div>
+
 };
 
 export default ListDisplay;
