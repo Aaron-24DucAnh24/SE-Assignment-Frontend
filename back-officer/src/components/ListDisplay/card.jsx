@@ -3,12 +3,13 @@ import "./ListDisplay.css";
 import infoIcon from "./img/infoIcon.png";
 
 export const Card = ({cardProp}) => {
-    const showDetail = () => {
-        console.log("Show detail")
+
+    // TODO Tuan
+    const ShowDetail = () =>{
+        console.log("DetailInfo handle " + cardProp.name);
     }
 
-
-    return (<div className="cardBox" OnClick={showDetail}>
+    return (<button className="cardBox" onClick={ShowDetail}>
         <div className="cardName">
             {cardProp.name}
         </div>
@@ -20,6 +21,6 @@ export const Card = ({cardProp}) => {
         <img src={infoIcon} className="icon"></img>
 
 
-    </div>);
+    </button>);
 };
 

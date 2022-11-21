@@ -4,7 +4,8 @@
     --color-select-card-name: rgb(32, 126, 242);
     --color-card-name: #7EAEEA;
     --color-select-card-background: rgb(218, 222, 227);
-    --color-select-tab: rgb(217, 234, 255);
+    --color-select-tab: #d9eaff;
+    --color-deselect-tab: #bcd1eb;
     --color-scroll-bar: rgb(173, 205, 239);
     --color-scroll-bar-thumb: rgb(161, 195, 227);
     --color-online: rgb(39, 210, 24);
@@ -35,6 +36,7 @@
     display: flex;
     align-items: center;
     margin: 5px 15px 15px 20px;
+    border: none;
 }
 
 .cardBox:hover {
@@ -83,29 +85,33 @@
 }
 
 /* Tab Section */
-.tabBackground {
+.tab_Background {
     width: 1034px;
     height: 612px;
     background-color: var(--color-main-blue);
     border-radius: 10px;
 }
 
-/* A tab (Ex: Nhân Viên thu gom) */
-.tab {
-    padding-left: 28px;
-    padding-top: 34px;
-}
+
 
 /* Navigation bar */
-.tabNav {
+.tab {
+    padding-top: 36px;
+    padding-left: 26px;
+}
+
+.tabNav {}
+
+.tabNav_Btn {
     width: 218px;
     height: 54px;
     background-color: var(--color-select-tab);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    margin-right: 12px;
 }
 
 /* Navigation name */
@@ -117,13 +123,17 @@
     color: var(--color-main-blue);
 }
 
-/* Contain card, scrollbar and "Khoi tao" btn */
+/* A tab (Ex: Nhân Viên thu gom) */
 .tabContainer {
     width: 964px;
     height: 486px;
     background-color: var(--color-select-tab);
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    display: none;
 }
 
+/* Contain card, scrollbar and "Khoi tao" btn */
 /* Create scroll */
 .tabContainer_scroll {
     /* From left margin left card box */
@@ -135,9 +145,42 @@
     overflow-y: scroll;
 }
 
+.tabContainer_scroll--long {
+    height: 410px;
+}
+
 /* Bring Card and scroll down to 56px */
-.tabContainer_scrollAndCard {
-    padding-top: 56px;
+.tabCard_scroll {
+    padding-top: 54px;
+}
+
+.btnGenerate {
+    width: 226px;
+    height: 60px;
+
+    background: rgba(0, 255, 178, 0.55);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: none;
+    /* transform: translateX(100%); */
+    right: 100%;
+    margin-top: 21px;
+    margin-left: 376px;
+}
+
+.btnText:hover {
+    opacity: 0.5;
+}
+
+.btnText {
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--color-main-blue);
 }
 
 /* Case online */
