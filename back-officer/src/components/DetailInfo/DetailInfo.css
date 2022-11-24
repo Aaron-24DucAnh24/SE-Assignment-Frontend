@@ -6,3 +6,19 @@
     margin-left: 20px;
     border-radius: 15px;
 }
+
+.detailInformation-header {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5px;
+    color: rgb(110, 139, 255);
+}
+
+.detailInformation-header__line {
+    height: 1px;
+    background: rgb(110, 139, 255);
+    width: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

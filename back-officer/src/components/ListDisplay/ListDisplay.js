@@ -88,7 +88,13 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
                     </div>
                 </div>
             </div>
-            <DetailInfor type={tabType} name={objectName} />
+            <DetailInfor
+                type={tabType}
+                name={objectName}
+                employee={Employee}
+                vehicle={Vehicle}
+                mcp={Mcp}
+            />
         </div>
     );
 };
