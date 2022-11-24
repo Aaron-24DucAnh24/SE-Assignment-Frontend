@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ListDisplay.css";
 import infoIcon from "./img/infoIcon.png";
 import * as ImIcons from "react-icons/im";
+import DetailInfor from "../DetailInfo/DetailInfo";
 
 export const Card = ({ cardProp }) => {
     // TODO Tuan

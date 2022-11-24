@@ -3,8 +3,6 @@ import "./ListDisplay.css";
 import { Card } from "./card";
 
 export const Tab = ({ type, Employee }) => {
-    const setDetail = () => {};
-
     const btnGen = (
         <button className="btnGenerate">
             <span className="btnText">Khoi tao</span>
@@ -19,7 +17,6 @@ export const Tab = ({ type, Employee }) => {
                         <Card
                             key={employee.name.toString()}
                             cardProp={employee}
-                            onDetailClick={setDetail}
                         />
                     );
                 })}
