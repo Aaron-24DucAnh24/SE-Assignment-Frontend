@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ListDisplay.css";
-// import * as ImIcons from "react-icons/im";
+import infoIcon from "./img/infoIcon.png";
 
 export const Card = ({ cardProp }) => {
     // TODO Tuan
@@ -26,9 +26,8 @@ export const Card = ({ cardProp }) => {
                         "Offline"
                     )}
                 </div>
-                {/*Looking not so good, lol */}
-                {/* <ImIcons.ImNotification /> */}
-                {/*<img src={infoIcon} className="icon"></img>*/}
+                
+                <img src={infoIcon} className="icon"></img>
             </button>
         </div>
     );
