@@ -65,7 +65,7 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
                     </div>
                 </div>
             </div>
-            <DetailInfor type={tabType} />
+            {/*<DetailInfor type={tabType} />*/}
         </div>
     );
 };

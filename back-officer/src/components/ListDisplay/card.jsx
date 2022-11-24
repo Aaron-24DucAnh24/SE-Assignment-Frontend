@@ -28,6 +28,7 @@ export const Card = ({ cardProp }) => {
                 <ImIcons.ImNotification />
                 {/*<img src={infoIcon} className="icon"></img>*/}
             </button>
+            {/*openDetail && <DetailInfor type={"0"} />*/}
         </div>
     );
 };
