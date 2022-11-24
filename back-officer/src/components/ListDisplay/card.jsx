@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "./ListDisplay.css";
-import infoIcon from "./img/infoIcon.png";
-import * as ImIcons from "react-icons/im";
+// import * as ImIcons from "react-icons/im";
 
 export const Card = ({ cardProp }) => {
     // TODO Tuan
     const [openDetail, setOpenDetail] = useState(false);
     const ShowDetail = () => {
         console.log("DetailInfo handle " + cardProp.name);
-        setOpenDetail(!openDetail);
+        {
+            var DetailInfo = document.querySelector(".detailInformation");
+            DetailInfo.innerHTML = cardProp.name;
+        }
+        // setOpenDetail(!openDetail);
     };
 
     return (
@@ -24,7 +27,7 @@ export const Card = ({ cardProp }) => {
                     )}
                 </div>
                 {/*Looking not so good, lol */}
-                <ImIcons.ImNotification />
+                {/* <ImIcons.ImNotification /> */}
                 {/*<img src={infoIcon} className="icon"></img>*/}
             </button>
         </div>
