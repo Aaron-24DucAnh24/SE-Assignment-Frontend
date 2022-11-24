@@ -4,6 +4,13 @@ import "./ListDisplay.css";
 import DetailInfor from "../DetailInfo/DetailInfo";
 
 const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
+    const [objectName, setObjectName] = useState("");
+
+    const setObjectHandler = (_object) => {
+        // pass object to detailInfo
+        setObjectName(_object);
+    };
+
     const TabSetting = (index) => {
         setTabTypeHandle(index); // let the detailBox knows what it is doing
         return ShowTab(index, "#d9eaff", "#bcd1eb");
@@ -58,14 +65,30 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
 
                     <div className="tabBody">
                         {/* Tab body */}
-                        <Tab type="E" Employee={Employee} />
-                        <Tab type="E" Employee={Employee} />
-                        <Tab type="V" Employee={Vehicle} />
-                        <Tab type="M" Employee={Mcp} />
+                        <Tab
+                            type="E"
+                            Employee={Employee}
+                            object={setObjectHandler}
+                        />
+                        <Tab
+                            type="E"
+                            Employee={Employee}
+                            object={setObjectHandler}
+                        />
+                        <Tab
+                            type="V"
+                            Employee={Vehicle}
+                            object={setObjectHandler}
+                        />
+                        <Tab
+                            type="M"
+                            Employee={Mcp}
+                            object={setObjectHandler}
+                        />
                     </div>
                 </div>
             </div>
-            {/*<DetailInfor type={tabType} />*/}
+            <DetailInfor type={tabType} name={objectName} />
         </div>
     );
 };

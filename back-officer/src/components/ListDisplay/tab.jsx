@@ -2,12 +2,17 @@ import React from "react";
 import "./ListDisplay.css";
 import { Card } from "./card";
 
-export const Tab = ({ type, Employee }) => {
+export const Tab = ({ type, Employee, object }) => {
     const btnGen = (
         <button className="btnGenerate">
             <span className="btnText">Khoi tao</span>
         </button>
     );
+
+    const setObject = (objectName) => {
+        // communicate up List
+        object(objectName);
+    };
 
     const tabCon = (
         <div className="tabCard_scroll">
@@ -17,6 +22,7 @@ export const Tab = ({ type, Employee }) => {
                         <Card
                             key={employee.name.toString()}
                             cardProp={employee}
+                            objectCard={setObject}
                         />
                     );
                 })}
@@ -32,6 +38,7 @@ export const Tab = ({ type, Employee }) => {
                         <Card
                             key={employee.name.toString()}
                             cardProp={employee}
+                            objectCard={setObject}
                         />
                     );
                 })}
