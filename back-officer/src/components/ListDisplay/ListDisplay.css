@@ -2,7 +2,7 @@
     --color-main-blue: rgb(110, 139, 255);
     --color-main-green: rgba(0, 225, 178, 0.55);
     --color-select-card-name: rgb(32, 126, 242);
-    --color-card-name: #7EAEEA;
+    --color-card-name: #7eaeea;
     --color-select-card-background: rgb(218, 222, 227);
     --color-select-tab: #d9eaff;
     --color-deselect-tab: #bcd1eb;
@@ -49,7 +49,7 @@
     display: flex;
     /* align-items: center; */
     width: 410px;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
@@ -57,7 +57,6 @@
     line-height: 130%;
     color: var(--color-card-name);
     margin-left: 45px;
-
 }
 
 .cardStatus {
@@ -65,13 +64,12 @@
     width: 234.61px;
     height: 39.58px;
     display: inline;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 130%;
     /* or 31px */
-
 
     color: var(--color-offline);
 }
@@ -81,7 +79,6 @@
     display: flex;
     width: 43px;
     margin-left: 134px;
-
 }
 
 /* Tab Section */
@@ -90,9 +87,8 @@
     height: 612px;
     background-color: var(--color-main-blue);
     border-radius: 10px;
+    float: left;
 }
-
-
 
 /* Navigation bar */
 .tab {
@@ -100,7 +96,8 @@
     padding-left: 26px;
 }
 
-.tabNav {}
+.tabNav {
+}
 
 .tabNav_Btn {
     width: 218px;
@@ -116,7 +113,7 @@
 
 /* Navigation name */
 .tabNav_name {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -176,7 +173,7 @@
 
 .btnText {
     width: 100%;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 32px;

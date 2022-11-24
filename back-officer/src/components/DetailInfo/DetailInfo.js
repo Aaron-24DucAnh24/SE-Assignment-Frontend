@@ -1,5 +1,7 @@
-const DetailInfor = () => {
-    return <div>This is for DetailInfor</div>;
+import "./DetailInfo.css";
+
+const DetailInfor = (props) => {
+    return <div className="detailInformation">{props.type}</div>;
 };
 
 export default DetailInfor;
