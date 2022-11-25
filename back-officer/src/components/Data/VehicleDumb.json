@@ -5,7 +5,8 @@
         "weight": "3000 kg",
         "empUsing": "Tran Trang Ky Phong",
         "locationName": "Tân Bình 96",
-        "address": "124 HTH, QTB"
+        "address": "124 HTH, QTB",
+        "isUsed" : true
     },
     {
         "name": "Xe rác 02",
@@ -13,7 +14,8 @@
         "weight": "3000 kg",
         "empUsing": "Tran Trang Ky Phong",
         "locationName": "Tân Bình 96",
-        "address": "124 HTH, QTB"
+        "address": "124 HTH, QTB",
+        "isUsed" : true
     },
     {
         "name": "Xe rác 03",
@@ -21,7 +23,8 @@
         "weight": "3000 kg",
         "empUsing": "Tran Trang Ky Phong",
         "locationName": "Tân Bình 96",
-        "address": "124 HTH, QTB"
+        "address": "124 HTH, QTB",
+        "isUsed" : true
     },
     {
         "name": "Xe rác 04",
@@ -29,7 +32,8 @@
         "weight": "3000 kg",
         "empUsing": "Tran Trang Ky Phong",
         "locationName": "Tân Bình 96",
-        "address": "124 HTH, QTB"
+        "address": "124 HTH, QTB",
+        "isUsed" : false
     },
     {
         "name": "Xe rác 05",
@@ -37,6 +41,7 @@
         "weight": "3000 kg",
         "empUsing": "Tran Trang Ky Phong",
         "locationName": "Tân Bình 96",
-        "address": "124 HTH, QTB"
+        "address": "124 HTH, QTB",
+        "isUsed" : false
     }
 ]

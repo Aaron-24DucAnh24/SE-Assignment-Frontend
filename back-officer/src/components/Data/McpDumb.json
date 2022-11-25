@@ -1,8 +1,8 @@
 [
-    { "name": "Tan Binh 01" },
-    { "name": "Tan Phu 05" },
-    { "name": "Quan 7 01" },
-    { "name": "Quan 10 21" },
-    { "name": "Thu Duc 03" },
-    { "name": "Binh Thanh 06" }
+    { "name": "Tan Binh 01", "status": 50 },
+    { "name": "Tan Phu 05" , "status": 75},
+    { "name": "Quan 7 01" ,"status": 60},
+    { "name": "Quan 10 21", "status": 50 },
+    { "name": "Thu Duc 03", "status": 100 },
+    { "name": "Binh Thanh 06", "status": 50 }
 ]

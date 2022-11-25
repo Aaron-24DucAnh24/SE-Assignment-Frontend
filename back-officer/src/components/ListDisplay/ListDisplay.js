@@ -14,7 +14,9 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
 
     const TabSetting = (index) => {
         // let the detailBox knows what it is doing
+        
         setTabType(index); 
+        console.log(index)
         return ShowTab(index, "#d9eaff", "#bcd1eb");
     };
 
