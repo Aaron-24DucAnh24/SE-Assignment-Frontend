@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Tran Trang Ky Phong",
+        "job": "Collector",
+        "status": true,
+        "employeeID": "2053325",
+        "chucVu": "Nhân viên thu gom rác",
+        "vehicle": "Xe rác 01",
+        "route": [
+            { "name": "Tân bình 01", "address": "124 THT, Q10" },
+            { "name": "Tân bình 02", "address": "268 LTK, Q10" },
+            { "name": "Q10 01", "address": "124 THT, Q10" },
+            { "name": "Q10 02", "address": "268 LTK, Q10" },
+            { "name": "Q10 03", "address": "268 LTK, Q10" }
+        ]
+    },
+    {
+        "name": "Dang Tien Dat",
+        "job": "Janitor",
+        "status": false,
+        "employeeID": "2053325",
+        "chucVu": "Nhân viên thu gom rác",
+        "vehicle": "Xe rác 02",
+        "route": [
+            { "name": "Tân bình 01", "address": "124 THT, Q10" },
+            { "name": "Tân bình 02", "address": "268 LTK, Q10" },
+            { "name": "Q10 01", "address": "124 THT, Q10" },
+            { "name": "Q10 02", "address": "268 LTK, Q10" },
+            { "name": "Q10 03", "address": "268 LTK, Q10" }
+        ]
+    },
+    {
+        "name": "Huynh Vo Tuan",
+        "job": "Janitor",
+        "status": false,
+        "employeeID": "2053325",
+        "chucVu": "Nhân viên thu gom rác",
+        "vehicle": "Xe rác 03",
+        "route": [
+            { "name": "Tân bình 01", "address": "124 THT, Q10" },
+            { "name": "Tân bình 02", "address": "268 LTK, Q10" },
+            { "name": "Q10 01", "address": "124 THT, Q10" },
+            { "name": "Q10 02", "address": "268 LTK, Q10" },
+            { "name": "Q10 03", "address": "268 LTK, Q10" }
+        ]
+    }
+]
