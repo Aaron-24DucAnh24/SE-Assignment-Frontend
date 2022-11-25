@@ -22,9 +22,10 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .detailInformation-name ul {
     list-style: none;
+}
+.detailInformation-name__ul {
     background-color: #ffffff;
     width: 350px;
     border-radius: 15px;
@@ -39,12 +40,21 @@
 
 .detailInformation-name__wrap {
     background-color: rgb(218, 222, 227);
-    width: 320px;
+    width: 280px;
     border-radius: 15px;
+    margin-left: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
+}
+
+.detailInformation-name__circle {
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 5px;
 }

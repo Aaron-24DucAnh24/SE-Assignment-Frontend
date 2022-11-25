@@ -15,7 +15,7 @@ const DetailInfor = (props) => {
                     .map((filteredEmp) => {
                         return (
                             <div key={filteredEmp.name}>
-                                <ul>
+                                <ul className="detailInformation-name__ul">
                                     <li>
                                         <b>Mã nhân viên: </b>
                                         {filteredEmp.employeeID}
@@ -33,7 +33,7 @@ const DetailInfor = (props) => {
                                         {filteredEmp.status}
                                     </li>
                                 </ul>
-                                <ul>
+                                <ul className="detailInformation-name__ul">
                                     <li>
                                         <b>Phương tiện: </b>
                                         <span className="detailInformation-name__wrap">
@@ -41,18 +41,22 @@ const DetailInfor = (props) => {
                                         </span>
                                     </li>
                                 </ul>
-                                <ul>
+                                <ul className="detailInformation-name__ul">
                                     <li>
                                         <b>Tuyến đường:</b>
-
-                                        {filteredEmp.route.map((_route) => {
-                                            return (
-                                                <li className="detailInformation-name__wrap">
-                                                    <b>{_route.name} </b>{" "}
-                                                    {_route.address}
-                                                </li>
-                                            );
-                                        })}
+                                        <ul>
+                                            {filteredEmp.route.map((_route) => {
+                                                return (
+                                                    <li
+                                                        key={_route.name}
+                                                        className="detailInformation-name__wrap"
+                                                    >
+                                                        <b>{_route.name} </b>{" "}
+                                                        {_route.address}
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
