@@ -109,6 +109,7 @@
     align-items: center;
     border: none;
     margin-right: 12px;
+    cursor: pointer;
 }
 
 /* Navigation name */
@@ -178,6 +179,7 @@
     font-weight: 600;
     font-size: 32px;
     color: var(--color-main-blue);
+    cursor: pointer;
 }
 
 /* Case online */
