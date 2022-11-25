@@ -5,7 +5,7 @@ import { Card } from "./card";
 export const Tab = ({ type, Employee, object }) => {
     const btnGen = (
         <button className="btnGenerate">
-            <span className="btnText">Khoi tao</span>
+            <span className="btnText">Khởi tạo</span>
         </button>
     );
 

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./ListDisplay.css";
-import infoIcon from "./img/infoIcon.png";
+import * as infoIcons from "react-icons/ri";
+
 
 export const Card = ({ cardProp, objectCard }) => {
     // TODO Tuan
     const ShowDetail = () => {
         {
-            // comunicate up tab
+            // communicate up tab
             objectCard(cardProp.name);
         }
     };
@@ -15,7 +16,6 @@ export const Card = ({ cardProp, objectCard }) => {
         <div>
             <button className="cardBox" onClick={ShowDetail}>
                 <div className="cardName">{cardProp.name}</div>
-
                 <div className="cardStatus">
                     {cardProp.status === true ? (
                         <span id="online">Online</span>
@@ -23,14 +23,8 @@ export const Card = ({ cardProp, objectCard }) => {
                         "Offline"
                     )}
                 </div>
-
-                <img
-                    src={infoIcon}
-                    className="icon"
-                    alt="notification_logo"
-                ></img>
+                <infoIcons.RiInformationLine id="iconInfo" />
             </button>
-            {/*openDetail && <DetailInfor type={"0"} />*/}
         </div>
     );
 };

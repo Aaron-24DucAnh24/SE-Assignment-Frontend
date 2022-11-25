@@ -5,6 +5,7 @@ import DetailInfor from "../DetailInfo/DetailInfo";
 
 const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
     const [objectName, setObjectName] = useState("");
+    const [tabType, setTabType] = useState("");
 
     const setObjectHandler = (_object) => {
         // pass object to detailInfo
@@ -12,13 +13,9 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
     };
 
     const TabSetting = (index) => {
-        setTabTypeHandle(index); // let the detailBox knows what it is doing
+        // let the detailBox knows what it is doing
+        setTabType(index); 
         return ShowTab(index, "#d9eaff", "#bcd1eb");
-    };
-
-    const [tabType, setTabType] = useState("");
-    const setTabTypeHandle = (type) => {
-        setTabType(type);
     };
 
     const ShowTab = (index, colorSelectTab, colorDeselectTab) => {
@@ -57,9 +54,9 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
                 <div className="tab">
                     <div className="tabNav">
                         {/* Tab navigation */}
-                        {<TabBtn tabName="Nhan Vien thu gom" index="0" />}
-                        {<TabBtn tabName="Nhan vien ve sinh" index="1" />}
-                        {<TabBtn tabName="Phuong tien" index="2" />}
+                        {<TabBtn tabName="Nhân viên thu gom" index="0" />}
+                        {<TabBtn tabName="Nhân viên vệ sinh" index="1" />}
+                        {<TabBtn tabName="Phương tiện" index="2" />}
                         {<TabBtn tabName="Mcp" index="3" />}
                     </div>
 

@@ -184,3 +184,9 @@
 #online {
     color: var(--color-online);
 }
+
+#iconInfo{
+    color: var(--color-card-name);
+    font-size: 40px;
+    margin-left: 134px;
+}
