@@ -25,20 +25,18 @@ function VehicleInfo(props) {
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Người sử dụng hiện tại: </b>
-                                    <br></br>
-                                    <span className="detailInformation-name__wrap">
+                                    <div className="detailInformation-name__wrap">
                                         {filteredVeh.empUsing}
-                                    </span>
+                                    </div>
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Vị trí hiện tại:</b>
-                                    <span className="detailInformatio-name__wrap">
+                                    <div className="detailInformation-name__wrap">
                                         <b>{filteredVeh.locationName} </b>{" "}
                                         {filteredVeh.address}
-                                        {console.log(filteredVeh.locationName)}
-                                    </span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
