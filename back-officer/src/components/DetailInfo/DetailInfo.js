@@ -3,6 +3,7 @@ import * as BiIcons from "react-icons/bi";
 import CollectorInfo from "./CollectorInfo";
 import JanitorInfo from "./JanitorInfo";
 import VehicleInfo from "./VehicleInfo";
+import McpInfo from "./McpInfo";
 
 const DetailInfor = (props) => {
     return (
@@ -30,6 +31,9 @@ const DetailInfor = (props) => {
                         vehicleList={props.vehicle}
                         vehicle={props.name}
                     />
+                )}
+                {props.type === "3" && (
+                    <McpInfo mcpList={props.mcp} mcp={props.name} />
                 )}
             </div>
         </div>

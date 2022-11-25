@@ -1,8 +1,56 @@
 [
-    { "name": "Tan Binh 01" },
-    { "name": "Tan Phu 05" },
-    { "name": "Quan 7 01" },
-    { "name": "Quan 10 21" },
-    { "name": "Thu Duc 03" },
-    { "name": "Binh Thanh 06" }
+    {
+        "name": "Tan Binh 01",
+        "code:": "TB01",
+        "weight": "10000 kg",
+        "status": "100%",
+        "janitor": "Nguyễn Minh Hùng",
+        "vehicle": "Xe rác 01",
+        "collector": "Đặng Tiến Đạt"
+    },
+    {
+        "name": "Tan Phu 05",
+        "code:": "TB01",
+        "weight": "10000 kg",
+        "status": "100%",
+        "janitor": "Nguyễn Minh Hùng",
+        "vehicle": "Xe rác 01",
+        "collector": "Đặng Tiến Đạt"
+    },
+    {
+        "name": "Quan 7 01",
+        "code:": "TB01",
+        "weight": "10000 kg",
+        "status": "100%",
+        "janitor": "Nguyễn Minh Hùng",
+        "vehicle": "Xe rác 01",
+        "collector": "Đặng Tiến Đạt"
+    },
+    {
+        "name": "Quan 10 21",
+        "code:": "TB01",
+        "weight": "10000 kg",
+        "status": "100%",
+        "janitor": "Nguyễn Minh Hùng",
+        "vehicle": "Xe rác 01",
+        "collector": "Đặng Tiến Đạt"
+    },
+    {
+        "name": "Thu Duc 03",
+        "code:": "TB01",
+        "weight": "10000 kg",
+        "status": "100%",
+        "janitor": "Nguyễn Minh Hùng",
+        "vehicle": "Xe rác 01",
+        "collector": "Đặng Tiến Đạt"
+    },
+    {
+        "name": "Binh Thanh 06",
+        "code:": "TB01",
+        "weight": "10000 kg",
+        "status": "100%",
+        "janitor": "Nguyễn Minh Hùng",
+        "vehicle": "Xe rác 01",
+        "collector": "Đặng Tiến Đạt"
+    }
 ]
