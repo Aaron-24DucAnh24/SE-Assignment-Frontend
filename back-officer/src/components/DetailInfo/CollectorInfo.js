@@ -39,7 +39,7 @@ function CollectorInfo(props) {
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Tuyến đường:</b>
-                                    <ul>
+                                    <div>
                                         {filteredEmp.route.map((_route) => {
                                             return (
                                                 <li
@@ -51,7 +51,7 @@ function CollectorInfo(props) {
                                                 </li>
                                             );
                                         })}
-                                    </ul>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
