@@ -10,7 +10,7 @@
 .detailInformation-header {
     text-align: center;
     font-size: 30px;
-    margin-top: 5px;
+    margin-top: 10px;
     color: rgb(110, 139, 255);
 }
 
@@ -18,7 +18,33 @@
     height: 1px;
     background: rgb(110, 139, 255);
     width: 300px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.detailInformation-name ul {
+    list-style: none;
+    background-color: #ffffff;
+    width: 350px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(110, 139, 255);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.detailInformation-name__wrap {
+    background-color: rgb(218, 222, 227);
+    width: 320px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
 }

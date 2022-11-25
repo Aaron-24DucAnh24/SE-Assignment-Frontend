@@ -10,7 +10,7 @@ function App() {
             job: "Collector",
             status: true,
             employeeID: "2053325",
-            chucVu: "Nhân viên thu gom rác,",
+            chucVu: "Nhân viên thu gom rác",
             vehicle: "Xe rác 01",
             route: [
                 { name: "Tân bình 01", address: "124 THT, Q10" },
@@ -25,8 +25,8 @@ function App() {
             job: "Janitor",
             status: false,
             employeeID: "2053325",
-            chucVu: "Nhân viên thu gom rác,",
-            vehicle: "Xe rác 01",
+            chucVu: "Nhân viên thu gom rác",
+            vehicle: "Xe rác 02",
             route: [
                 { name: "Tân bình 01", address: "124 THT, Q10" },
                 { name: "Tân bình 02", address: "268 LTK, Q10" },
@@ -40,8 +40,8 @@ function App() {
             job: "Janitor",
             status: false,
             employeeID: "2053325",
-            chucVu: "Nhân viên thu gom rác,",
-            vehicle: "Xe rác 01",
+            chucVu: "Nhân viên thu gom rác",
+            vehicle: "Xe rác 03",
             route: [
                 { name: "Tân bình 01", address: "124 THT, Q10" },
                 { name: "Tân bình 02", address: "268 LTK, Q10" },
