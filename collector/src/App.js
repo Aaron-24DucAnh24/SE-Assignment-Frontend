@@ -4,6 +4,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import "react-week-calendar/dist/style.less";
+import Header from "./Header/Header";
 
 // import "@fullcalendar/core/main.css";
 // import "@fullcalendar/daygrid/main.css";
@@ -18,6 +19,7 @@ function App() {
     ];
     return (
         <div className="calendar">
+            <Header />
             <FullCalendar
                 defaultView="timeGridWeek"
                 header={{
