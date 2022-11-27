@@ -4,6 +4,7 @@ import { useState } from "react";
 import EmpDumb from "./components/Data/EmpDumb.json";
 import McpDumb from "./components/Data/McpDumb.json";
 import VehicleDumb from "./components/Data/VehicleDumb.json";
+import Datepicker from "./components/DatePicker/Datepicker.js";
 
 function App() {
     const [Employee, SetEmployee] = useState(EmpDumb);
@@ -15,6 +16,7 @@ function App() {
     return (
         <div>
             <Header />
+            <Datepicker />
             <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
         </div>
     );
