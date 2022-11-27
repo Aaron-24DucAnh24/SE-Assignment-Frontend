@@ -5,6 +5,7 @@ import EmpDumb from "./components/Data/EmpDumb.json";
 import McpDumb from "./components/Data/McpDumb.json";
 import VehicleDumb from "./components/Data/VehicleDumb.json";
 import Datepicker from "./components/DatePicker/Datepicker.js";
+import "./App.css";
 
 function App() {
     const [Employee, SetEmployee] = useState(EmpDumb);
@@ -18,6 +19,11 @@ function App() {
             <Header />
             <Datepicker />
             <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
+            <div className="centerBtn">
+                <button className="btnGenerate">
+                    <span className="btnText">Cập nhật</span>
+                </button>
+            </div>
         </div>
     );
 }

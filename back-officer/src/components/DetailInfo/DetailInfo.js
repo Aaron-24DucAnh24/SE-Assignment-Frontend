@@ -6,11 +6,15 @@ import VehicleInfo from "./VehicleInfo";
 import McpInfo from "./McpInfo";
 
 const DetailInfor = (props) => {
+    const onEditClickHandler = () => {
+        console.log("click!");
+    };
+
     return (
         <div className="detailInformation">
             <div className="detailInformation-header">
                 Thông tin chi tiết
-                <BiIcons.BiEdit />
+                <BiIcons.BiEdit onClick={onEditClickHandler} />
                 <div className="detailInformation-header__line"></div>
             </div>
             <div className="detailInformation-name">
