@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header.js";
-import Confirm from "./components/Confirm/btnConfirm"
+import Confirm from "./components/Confirm/btnConfirm";
 import ListDisplay from "./components/ListDisplay/ListDisplay.js";
 import Footer from "./components/footer/footer.js";
 import { useState } from "react";
@@ -20,9 +20,9 @@ function App() {
         <div>
             <Header />
             <div className="Body">
-                {/* <Datepicker /> */}
+                <Datepicker />
                 <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
-                <Confirm /> 
+                <Confirm />
             </div>
             <Footer />
         </div>

@@ -13,8 +13,11 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
         setObjectName(_object);
     };
 
+    const chooseTab = (index) => {};
+
     const ShowTab = (index) => {
         // get all tab
+        console.log("Show tab" + index);
         var tabNav_Btns = document.querySelectorAll(".tabNav_Btn");
         var tabBodys = document.querySelectorAll(".tabContainer");
 
@@ -22,6 +25,7 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
         tabNav_Btns.forEach((btn) => {
             btn.style.backgroundColor = "#bcd1eb";
         });
+        console.log("run?");
         tabNav_Btns[index].style.backgroundColor = "#d9eaff";
 
         // Show tab
@@ -53,10 +57,10 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
                 <div className="tab">
                     <div className="tabNav">
                         {/* Tab navigation */}
-                        {<TabBtn tabName="Nhân viên thu gom" index="0" />}
-                        {<TabBtn tabName="Nhân viên vệ sinh" index="1" />}
-                        {<TabBtn tabName="Phương tiện" index="2" />}
-                        {<TabBtn tabName="Mcp" index="3" />}
+                        <TabBtn tabName="Nhân viên thu gom" index="0" />
+                        <TabBtn tabName="Nhân viên vệ sinh" index="1" />
+                        <TabBtn tabName="Phương tiện" index="2" />
+                        <TabBtn tabName="Mcp" index="3" />
                     </div>
 
                     <div className="tabBody">
