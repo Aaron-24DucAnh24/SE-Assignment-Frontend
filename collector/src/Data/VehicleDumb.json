@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Xe rác 01",
+        "code": "51C-888-666",
+        "weight": "3000 kg",
+        "empUsing": "Tran Trang Ky Phong",
+        "locationName": "Tân Bình 96",
+        "address": "124 HTH, QTB",
+        "isUsed" : true
+    },
+    {
+        "name": "Xe rác 02",
+        "code": "51C-888-666",
+        "weight": "3000 kg",
+        "empUsing": "Tran Trang Ky Phong",
+        "locationName": "Tân Bình 96",
+        "address": "124 HTH, QTB",
+        "isUsed" : true
+    },
+    {
+        "name": "Xe rác 03",
+        "code": "51C-888-666",
+        "weight": "3000 kg",
+        "empUsing": "Tran Trang Ky Phong",
+        "locationName": "Tân Bình 96",
+        "address": "124 HTH, QTB",
+        "isUsed" : true
+    },
+    {
+        "name": "Xe rác 04",
+        "code": "51C-888-666",
+        "weight": "3000 kg",
+        "empUsing": "Tran Trang Ky Phong",
+        "locationName": "Tân Bình 96",
+        "address": "124 HTH, QTB",
+        "isUsed" : true
+    },
+    {
+        "name": "Xe rác 05",
+        "code": "51C-888-666",
+        "weight": "3000 kg",
+        "empUsing": "Tran Trang Ky Phong",
+        "locationName": "Tân Bình 96",
+        "address": "124 HTH, QTB",
+        "isUsed" : true
+    },
+    {
+        "name": "Xe rác 06",
+        "code": "51C-888-667",
+        "weight": "3000 kg",
+        "empUsing": "",
+        "locationName": "Tân Bình 96",
+        "address": "124 HTH, QTB",
+        "isUsed" : false
+    }
+]

@@ -1,17 +1,8 @@
-import React from "react";
-
-function Header() {
-    return (
-        <div>
-            <div class="header">
-                <div class="header__wrapper">
-                    <a href="/" class="header__title">
-                        UWC 2.0
-                    </a>
-                </div>
-            </div>
-        </div>
-    );
-}
+const Header = () => {
+    // TODO: Dat
+    return <div className="header">
+        <div className="header__wrapper">Dat TODO</div>
+    </div>;
+};
 
 export default Header;
