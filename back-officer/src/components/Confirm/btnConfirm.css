@@ -1,0 +1,27 @@
+.btnGenerate {
+    width: 226px;
+    height: 60px;
+    background: rgba(0, 255, 178, 0.55);
+    border-radius: 50px;
+}
+
+.btnText:hover {
+    opacity: 0.5;
+}
+
+.btnText {
+    width: 100%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--color-main-blue);
+    cursor: pointer;
+}
+
+.centerBtn {
+    float: none;
+    margin-left: 250px;
+    margin-top: 660px;
+    padding-bottom: 20px;
+}

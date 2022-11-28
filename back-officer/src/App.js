@@ -1,5 +1,7 @@
 import Header from "./components/Header/Header.js";
+import Confirm from "./components/Confirm/btnConfirm"
 import ListDisplay from "./components/ListDisplay/ListDisplay.js";
+import Footer from "./components/footer/footer.js";
 import { useState } from "react";
 import EmpDumb from "./components/Data/EmpDumb.json";
 import McpDumb from "./components/Data/McpDumb.json";
@@ -17,13 +19,12 @@ function App() {
     return (
         <div>
             <Header />
-            <Datepicker />
-            <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
-            <div className="centerBtn">
-                <button className="btnGenerate">
-                    <span className="btnText">Cập nhật</span>
-                </button>
+            <div className="Body">
+                {/* <Datepicker /> */}
+                <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
+                <Confirm /> 
             </div>
+            <Footer />
         </div>
     );
 }

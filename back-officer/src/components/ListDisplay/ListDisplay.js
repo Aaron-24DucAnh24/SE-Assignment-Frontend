@@ -51,7 +51,7 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
 
     // TODO Phong
     return (
-        <div>
+        <div className="tab_contain">
             <div className="tab_Background">
                 <div className="tab">
                     <div className="tabNav">

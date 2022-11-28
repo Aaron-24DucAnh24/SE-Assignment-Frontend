@@ -1,32 +1,4 @@
-:root {
-    --color-main-blue: rgb(110, 139, 255);
-    --color-main-green: rgba(0, 225, 178, 0.55);
-    --color-select-card-name: rgb(32, 126, 242);
-    --color-card-name: #7eaeea;
-    --color-select-card-background: rgb(218, 222, 227);
-    --color-select-tab: #d9eaff;
-    --color-deselect-tab: #bcd1eb;
-    --color-scroll-bar: rgb(173, 205, 239);
-    --color-scroll-bar-thumb: rgb(161, 195, 227);
-    --color-online: rgb(39, 210, 24);
-    --color-offline: rgba(9, 10, 9, 0.39);
-    --color-white: rgb(255, 255, 255);
-}
 
-::-webkit-scrollbar {
-    width: 16px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 5px;
-    /* box-shadow: inset 0 0 10px var(--color-scroll-bar); */
-    background-color: var(--color-scroll-bar);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: var(--color-scroll-bar-thumb);
-}
 
 .cardBox {
     background-color: var(--color-white);
@@ -52,7 +24,7 @@
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 22px;
     text-transform: uppercase;
     line-height: 130%;
     color: var(--color-card-name);
@@ -79,6 +51,10 @@
     display: flex;
     width: 43px;
     margin-left: 134px;
+}
+
+.tab_contain{
+    display: block;
 }
 
 /* Tab Section */
@@ -114,10 +90,10 @@
 
 /* Navigation name */
 .tabNav_name {
-    font-family: "Inter";
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     color: var(--color-main-blue);
 }
 
