@@ -1,5 +1,8 @@
 import React from "react";
 import "./DetailInfo.css";
+import Vehicle from "../Data/VehicleDumb.json";
+import "./DropDown.css";
+import Mcp from "../Data/McpName.json";
 
 function CollectorInfo(props) {
     // employeeList={props.employee} employee={props.name}
@@ -31,9 +34,31 @@ function CollectorInfo(props) {
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Phương tiện: </b>
-                                    <span className="detailInformation-name__wrap">
-                                        {filteredEmp.vehicle}
-                                    </span>
+                                    {!props.edit && (
+                                        <span className="detailInformation-name__wrap">
+                                            {filteredEmp.vehicle}
+                                        </span>
+                                    )}
+                                    {props.edit && (
+                                        <span>
+                                            <select
+                                                name="vehicle"
+                                                id="vehicle"
+                                                className="custom-select"
+                                            >
+                                                {Vehicle.map((veh) => {
+                                                    return (
+                                                        <option
+                                                            key={veh.name}
+                                                            value={veh.name}
+                                                        >
+                                                            {veh.name}
+                                                        </option>
+                                                    );
+                                                })}
+                                            </select>
+                                        </span>
+                                    )}
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
@@ -46,8 +71,38 @@ function CollectorInfo(props) {
                                                     key={_route.name}
                                                     className="detailInformation-name__wrap"
                                                 >
-                                                    <b>{_route.name} </b>{" "}
-                                                    {_route.address}
+                                                    {!props.edit && (
+                                                        <div>
+                                                            <b>
+                                                                {_route.name}{" "}
+                                                            </b>{" "}
+                                                            {_route.address}
+                                                        </div>
+                                                    )}
+                                                    {props.edit && (
+                                                        <select
+                                                            name={Mcp.name}
+                                                            id="route"
+                                                            className="custom-select"
+                                                        >
+                                                            {Mcp.map((rou) => {
+                                                                return (
+                                                                    <option
+                                                                        key={
+                                                                            rou.name
+                                                                        }
+                                                                        value={
+                                                                            rou.name
+                                                                        }
+                                                                    >
+                                                                        {
+                                                                            rou.name
+                                                                        }
+                                                                    </option>
+                                                                );
+                                                            })}
+                                                        </select>
+                                                    )}
                                                 </li>
                                             );
                                         })}
