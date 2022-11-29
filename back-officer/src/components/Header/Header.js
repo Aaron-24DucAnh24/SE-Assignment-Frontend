@@ -12,9 +12,9 @@ const Header = () => {
                 </div>
                 <div class = "header_right">
                         <a href = "/">
-                        <IconContext.Provider value ={{className: "message_icons"}}>
-                                <AiFillMessage /> 
-                        </IconContext.Provider>
+                                <IconContext.Provider value ={{className: "message_icons"}}>
+                                        <AiFillMessage /> 
+                                </IconContext.Provider>
                         </a>
                         <a href = "/" class = "header_title"><span class = "profile_name">Nguyễn Minh Hùng</span></a>
                         <a href = "/">
