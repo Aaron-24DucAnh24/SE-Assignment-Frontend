@@ -1,0 +1,64 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 0 0 25px;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.header_left{
+    display: flex
+}
+
+.header_title{
+    display: flex;
+    padding: 0 25px;
+    height: 70px;
+    box-sizing: border-box;
+    margin: 0;
+    color: #fff;
+    background-color: #6E8BFF;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 7px;
+} 
+
+.title_name{
+    font-family: 'Inter';
+    font-style: normal; 
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.profile_name{
+    font-family: 'Inter';
+    font-style: normal; 
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header_right{  
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header_right a{
+    display: flex;
+    padding: 0 25px;
+    align-items: center;
+}
+
+.message_icons{
+    color: #6E8BFF;
+    font-size: 55px;
+}
+
+.profile_icons{
+    color: #6E8BFF;
+    font-size: 70px;
+}
