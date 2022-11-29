@@ -2,7 +2,7 @@ import React from "react";
 import "./DetailInfo.css";
 import Vehicle from "../Data/VehicleDumb.json";
 import "./DropDown.css";
-import Mcp from "../Data/McpName.json";
+import Mcp from "../Data/RouteDumb.json";
 
 function CollectorInfo(props) {
     // employeeList={props.employee} employee={props.name}
@@ -67,12 +67,9 @@ function CollectorInfo(props) {
                                     <div>
                                         {filteredEmp.route.map((_route) => {
                                             return (
-                                                <li
-                                                    key={_route.name}
-                                                    className="detailInformation-name__wrap"
-                                                >
+                                                <li key={_route.name}>
                                                     {!props.edit && (
-                                                        <div>
+                                                        <div className="detailInformation-name__wrap">
                                                             <b>
                                                                 {_route.name}{" "}
                                                             </b>{" "}
@@ -95,9 +92,14 @@ function CollectorInfo(props) {
                                                                             rou.name
                                                                         }
                                                                     >
-                                                                        {
-                                                                            rou.name
-                                                                        }
+                                                                        <div>
+                                                                            {
+                                                                                rou.name
+                                                                            }{" "}
+                                                                            {
+                                                                                rou.address
+                                                                            }
+                                                                        </div>
                                                                     </option>
                                                                 );
                                                             })}
