@@ -1,4 +1,6 @@
 import React from "react";
+import Employee from "../Data/EmpDumb.json";
+import Vehicle from "../Data/VehicleDumb.json";
 
 function McpInfo(props) {
     return (
@@ -29,25 +31,91 @@ function McpInfo(props) {
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Nhân viên vệ sinh: </b>
-                                    <div className="detailInformation-name__wrap">
-                                        {filteredMcp.janitor}
-                                    </div>
+                                    {!props.edit && (
+                                        <div className="detailInformation-name__wrap">
+                                            {filteredMcp.janitor}
+                                        </div>
+                                    )}
+                                    {props.edit && (
+                                        <div>
+                                            <select
+                                                name="empUsing"
+                                                id="vehicle"
+                                                className="custom-select"
+                                            >
+                                                {Employee.map((emp) => {
+                                                    return (
+                                                        <option
+                                                            key={emp.name}
+                                                            value={emp.name}
+                                                        >
+                                                            {emp.name}
+                                                        </option>
+                                                    );
+                                                })}
+                                            </select>
+                                        </div>
+                                    )}
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Xe đẩy hiện có: </b>
-                                    <div className="detailInformation-name__wrap">
-                                        {filteredMcp.vehicle}
-                                    </div>
+                                    {!props.edit && (
+                                        <div className="detailInformation-name__wrap">
+                                            {filteredMcp.vehicle}
+                                        </div>
+                                    )}
+                                    {props.edit && (
+                                        <div>
+                                            <select
+                                                name="vehicle"
+                                                id="vehicle"
+                                                className="custom-select"
+                                            >
+                                                {Vehicle.map((veh) => {
+                                                    return (
+                                                        <option
+                                                            key={veh.name}
+                                                            value={veh.name}
+                                                        >
+                                                            {veh.name}
+                                                        </option>
+                                                    );
+                                                })}
+                                            </select>
+                                        </div>
+                                    )}
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Nhân viên thu gom: </b>
-                                    <div className="detailInformation-name__wrap">
-                                        {filteredMcp.collector}
-                                    </div>
+                                    {!props.edit && (
+                                        <div className="detailInformation-name__wrap">
+                                            {filteredMcp.collector}
+                                        </div>
+                                    )}
+                                    {props.edit && (
+                                        <div>
+                                            <select
+                                                name="empUsing"
+                                                id="vehicle"
+                                                className="custom-select"
+                                            >
+                                                {Employee.map((emp) => {
+                                                    return (
+                                                        <option
+                                                            key={emp.name}
+                                                            value={emp.name}
+                                                        >
+                                                            {emp.name}
+                                                        </option>
+                                                    );
+                                                })}
+                                            </select>
+                                        </div>
+                                    )}
                                 </li>
                             </ul>
                         </div>
