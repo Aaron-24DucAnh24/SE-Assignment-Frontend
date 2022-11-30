@@ -1,0 +1,34 @@
+
+.date{
+    color:var(--color-main-blue) ;
+    font-size: 1.5rem;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.calendar{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 1037px;
+    border-radius: 40px;
+    background-color: #d9eaff;
+    margin-bottom: 20px;
+    color: var(--color-main-blue);
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.react-datepicker-wrapper .react-datepicker__input-container{
+    margin-left: 20px;
+}
+.react-datepicker-wrapper .react-datepicker__input-container input{
+    height: 26px;
+    background-color: var(--color-deselect-tab);
+    border-radius: 5px;
+    color: var(--color-main-blue);
+    font-size: large;
+    padding-left: 50px;
+    width: 200px;
+    cursor: pointer;
+}
