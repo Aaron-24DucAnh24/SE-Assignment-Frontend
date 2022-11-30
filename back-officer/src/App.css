@@ -171,3 +171,17 @@ input::-webkit-credentials-auto-fill-button {
     padding-top: 100px;
     background-color: #f2f2f2;
 }
+
+.background{
+    background-color: #f2f2f2;;
+}
+
+.button{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.calendar {
+    background-color: var(--color-select-tab);
+    font-size: 1.8rem;
+}
