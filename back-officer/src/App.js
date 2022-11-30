@@ -20,7 +20,10 @@ function App() {
         <div>
             <Header />
             <div className="Body">
-                <Datepicker />
+                <div className="calendar">
+                    Calendar
+                    <Datepicker className="date" />
+                </div>
                 <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
                 <Confirm />
             </div>

@@ -18,9 +18,9 @@ const DetailInfor = (props) => {
             <form>
                 <div className="detailInformation-header">
                     Thông tin chi tiết
-                    {!edit && <BiIcons.BiEdit onClick={onEditClickHandler} />}
+                    {!edit && <BiIcons.BiEdit className="hightlight" onClick={onEditClickHandler} />}
                     {edit && (
-                        <BiIcons.BiCheckSquare
+                        <BiIcons.BiCheckSquare className="hightlight"
                             onClick={onEditClickHandler}
                             type="submit"
                         />
