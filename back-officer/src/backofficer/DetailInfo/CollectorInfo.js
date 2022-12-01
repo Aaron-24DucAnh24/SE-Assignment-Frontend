@@ -8,15 +8,15 @@ function CollectorInfo(props) {
     // employeeList={props.employee} employee={props.name}
     return (
         <div>
-            {props.employeeList
+            {props.collectorList
                 .filter((emp) => emp.name === props.employee)
                 .map((filteredEmp) => {
                     return (
-                        <div key={filteredEmp.name}>
+                        <div key={filteredEmp.id}>
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Mã nhân viên: </b>
-                                    {filteredEmp.employeeID}
+                                    {filteredEmp.id}
                                 </li>
                                 <li>
                                     <b>Tên: </b>
@@ -24,7 +24,7 @@ function CollectorInfo(props) {
                                 </li>
                                 <li>
                                     <b>Chức vụ: </b>
-                                    {filteredEmp.chucVu}
+                                    {filteredEmp.job}
                                 </li>
                                 <li>
                                     <b>Trạng thái: </b>
@@ -36,7 +36,7 @@ function CollectorInfo(props) {
                                     <b>Phương tiện: </b>
                                     {!props.edit && (
                                         <span className="detailInformation-name__wrap">
-                                            {filteredEmp.vehicle}
+                                            {filteredEmp.vehicleName}
                                         </span>
                                     )}
                                     {props.edit && (
@@ -46,22 +46,24 @@ function CollectorInfo(props) {
                                                 id="vehicle"
                                                 className="custom-select"
                                             >
-                                                {Vehicle.map((veh) => {
-                                                    return (
-                                                        <option
-                                                            key={veh.name}
-                                                            value={veh.name}
-                                                        >
-                                                            {veh.name}
-                                                        </option>
-                                                    );
-                                                })}
+                                                {props.vehicleList.map(
+                                                    (veh) => {
+                                                        return (
+                                                            <option
+                                                                key={veh.name}
+                                                                value={veh.name}
+                                                            >
+                                                                {veh.name}
+                                                            </option>
+                                                        );
+                                                    }
+                                                )}
                                             </select>
                                         </span>
                                     )}
                                 </li>
                             </ul>
-                            <ul className="detailInformation-name__ul">
+                            {/*<ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Tuyến đường:</b>
                                     <div>
@@ -111,6 +113,7 @@ function CollectorInfo(props) {
                                     </div>
                                 </li>
                             </ul>
+                            */}
                         </div>
                     );
                 })}

@@ -10,7 +10,6 @@ const DetailInfor = (props) => {
     const [edit, setEdit] = useState(false);
     const onEditClickHandler = () => {
         setEdit(!edit);
-        console.log("click!");
     };
 
     return (
@@ -18,9 +17,15 @@ const DetailInfor = (props) => {
             <form>
                 <div className="detailInformation-header">
                     Thông tin chi tiết
-                    {!edit && <BiIcons.BiEdit className="hightlight" onClick={onEditClickHandler} />}
+                    {!edit && (
+                        <BiIcons.BiEdit
+                            className="hightlight"
+                            onClick={onEditClickHandler}
+                        />
+                    )}
                     {edit && (
-                        <BiIcons.BiCheckSquare className="hightlight"
+                        <BiIcons.BiCheckSquare
+                            className="hightlight"
                             onClick={onEditClickHandler}
                             type="submit"
                         />
@@ -30,14 +35,16 @@ const DetailInfor = (props) => {
                 <div className="detailInformation-name">
                     {props.type === "0" && (
                         <CollectorInfo
-                            employeeList={props.employee}
+                            collectorList={props.collector}
+                            vehicleList={props.vehicle}
                             employee={props.name}
                             edit={edit}
                         />
                     )}
                     {props.type === "1" && (
                         <JanitorInfo
-                            employeeList={props.employee}
+                            janitorList={props.janitor}
+                            vehicleList={props.vehicle}
                             employee={props.name}
                             edit={edit}
                         />
@@ -45,6 +52,8 @@ const DetailInfor = (props) => {
                     {props.type === "2" && (
                         <VehicleInfo
                             vehicleList={props.vehicle}
+                            collectorList={props.collector}
+                            mcpList={props.mcp}
                             vehicle={props.name}
                             edit={edit}
                         />
@@ -52,6 +61,8 @@ const DetailInfor = (props) => {
                     {props.type === "3" && (
                         <McpInfo
                             mcpList={props.mcp}
+                            janitorList={props.janitor}
+                            collectorList={props.collector}
                             mcp={props.name}
                             edit={edit}
                         />

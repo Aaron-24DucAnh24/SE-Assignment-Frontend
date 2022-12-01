@@ -13,7 +13,7 @@ function McpInfo(props) {
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Mã MCP: </b>
-                                    {filteredMcp.code}
+                                    {filteredMcp.name}
                                 </li>
                                 <li>
                                     <b>Tên: </b>
@@ -21,7 +21,7 @@ function McpInfo(props) {
                                 </li>
                                 <li>
                                     <b>Sức chứa: </b>
-                                    {filteredMcp.weight}
+                                    {filteredMcp.capacity}
                                 </li>
                                 <li>
                                     <b>Trạng thái: </b>
@@ -33,7 +33,7 @@ function McpInfo(props) {
                                     <b>Nhân viên vệ sinh: </b>
                                     {!props.edit && (
                                         <div className="detailInformation-name__wrap">
-                                            {filteredMcp.janitor}
+                                            {filteredMcp.janitorName}
                                         </div>
                                     )}
                                     {props.edit && (
@@ -43,16 +43,18 @@ function McpInfo(props) {
                                                 id="vehicle"
                                                 className="custom-select"
                                             >
-                                                {Employee.map((emp) => {
-                                                    return (
-                                                        <option
-                                                            key={emp.name}
-                                                            value={emp.name}
-                                                        >
-                                                            {emp.name}
-                                                        </option>
-                                                    );
-                                                })}
+                                                {props.janitorList.map(
+                                                    (emp) => {
+                                                        return (
+                                                            <option
+                                                                key={emp.id}
+                                                                value={emp.name}
+                                                            >
+                                                                {emp.name}
+                                                            </option>
+                                                        );
+                                                    }
+                                                )}
                                             </select>
                                         </div>
                                     )}
@@ -61,31 +63,11 @@ function McpInfo(props) {
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Xe đẩy hiện có: </b>
-                                    {!props.edit && (
+                                    {
                                         <div className="detailInformation-name__wrap">
-                                            {filteredMcp.vehicle}
+                                            {filteredMcp.trollerName}
                                         </div>
-                                    )}
-                                    {props.edit && (
-                                        <div>
-                                            <select
-                                                name="vehicle"
-                                                id="vehicle"
-                                                className="custom-select"
-                                            >
-                                                {Vehicle.map((veh) => {
-                                                    return (
-                                                        <option
-                                                            key={veh.name}
-                                                            value={veh.name}
-                                                        >
-                                                            {veh.name}
-                                                        </option>
-                                                    );
-                                                })}
-                                            </select>
-                                        </div>
-                                    )}
+                                    }
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
@@ -93,7 +75,7 @@ function McpInfo(props) {
                                     <b>Nhân viên thu gom: </b>
                                     {!props.edit && (
                                         <div className="detailInformation-name__wrap">
-                                            {filteredMcp.collector}
+                                            {filteredMcp.collectorName}
                                         </div>
                                     )}
                                     {props.edit && (
@@ -103,16 +85,18 @@ function McpInfo(props) {
                                                 id="vehicle"
                                                 className="custom-select"
                                             >
-                                                {Employee.map((emp) => {
-                                                    return (
-                                                        <option
-                                                            key={emp.name}
-                                                            value={emp.name}
-                                                        >
-                                                            {emp.name}
-                                                        </option>
-                                                    );
-                                                })}
+                                                {props.collectorList.map(
+                                                    (emp) => {
+                                                        return (
+                                                            <option
+                                                                key={emp.id}
+                                                                value={emp.name}
+                                                            >
+                                                                {emp.name}
+                                                            </option>
+                                                        );
+                                                    }
+                                                )}
                                             </select>
                                         </div>
                                     )}

@@ -3,7 +3,7 @@ import { Tab } from "./tab";
 import "./ListDisplay.css";
 import DetailInfor from "../DetailInfo/DetailInfo";
 
-const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
+const ListDisplay = ({ Collector, Janitor, Vehicle, Mcp }) => {
     const [objectName, setObjectName] = useState("");
     const [tabType, setTabType] = useState();
     //const [showTab, showTabHandler] = useState()
@@ -12,8 +12,6 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
         // pass object to detailInfo
         setObjectName(_object);
     };
-
-    const chooseTab = (index) => {};
 
     const ShowTab = (index) => {
         // get all tab
@@ -67,22 +65,22 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
                         {/* Tab body */}
                         <Tab
                             type="E"
-                            Employee={Employee}
+                            dataList={Collector}
                             object={setObjectHandler}
                         />
                         <Tab
                             type="E"
-                            Employee={Employee}
+                            dataList={Janitor}
                             object={setObjectHandler}
                         />
                         <Tab
                             type="V"
-                            Employee={Vehicle}
+                            dataList={Vehicle}
                             object={setObjectHandler}
                         />
                         <Tab
                             type="M"
-                            Employee={Mcp}
+                            dataList={Mcp}
                             object={setObjectHandler}
                         />
                     </div>
@@ -91,7 +89,8 @@ const ListDisplay = ({ Employee, Vehicle, Mcp }) => {
             <DetailInfor
                 type={tabType}
                 name={objectName}
-                employee={Employee}
+                collector={Collector}
+                janitor={Janitor}
                 vehicle={Vehicle}
                 mcp={Mcp}
             />

@@ -5,15 +5,15 @@ import Mcp from "../Data/RouteDumb.json";
 function JanitorInfo(props) {
     return (
         <div>
-            {props.employeeList
+            {props.janitorList
                 .filter((emp) => emp.name === props.employee)
                 .map((filteredEmp) => {
                     return (
-                        <div key={filteredEmp.name}>
+                        <div key={filteredEmp.id}>
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Mã nhân viên: </b>
-                                    {filteredEmp.employeeID}
+                                    {filteredEmp.id}
                                 </li>
                                 <li>
                                     <b>Tên: </b>
@@ -21,7 +21,7 @@ function JanitorInfo(props) {
                                 </li>
                                 <li>
                                     <b>Chức vụ: </b>
-                                    {filteredEmp.chucVu}
+                                    {filteredEmp.job}
                                 </li>
                                 <li>
                                     <b>Trạng thái: </b>
@@ -33,7 +33,7 @@ function JanitorInfo(props) {
                                     <b>Phương tiện: </b>
                                     {!props.edit && (
                                         <span className="detailInformation-name__wrap">
-                                            {filteredEmp.vehicle}
+                                            {filteredEmp.vehicleName}
                                         </span>
                                     )}
                                     {props.edit && (
@@ -43,22 +43,24 @@ function JanitorInfo(props) {
                                                 id="vehicle"
                                                 className="custom-select"
                                             >
-                                                {Vehicle.map((veh) => {
-                                                    return (
-                                                        <option
-                                                            key={veh.name}
-                                                            value={veh.name}
-                                                        >
-                                                            {veh.name}
-                                                        </option>
-                                                    );
-                                                })}
+                                                {props.vehicleList.map(
+                                                    (veh) => {
+                                                        return (
+                                                            <option
+                                                                key={veh.name}
+                                                                value={veh.name}
+                                                            >
+                                                                {veh.name}
+                                                            </option>
+                                                        );
+                                                    }
+                                                )}
                                             </select>
                                         </span>
                                     )}
                                 </li>
                             </ul>
-                            <ul className="detailInformation-name__ul">
+                            {/*<ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Tuyến đường:</b>
                                     <div>
@@ -108,6 +110,7 @@ function JanitorInfo(props) {
                                     </div>
                                 </li>
                             </ul>
+                                    */}
                         </div>
                     );
                 })}

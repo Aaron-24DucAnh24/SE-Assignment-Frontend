@@ -8,12 +8,12 @@ import McpDumb from "./Data/McpDumb.json";
 import VehicleDumb from "./Data/VehicleDumb.json";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "react-router-dom"
-import React from 'react';
-
+import "react-router-dom";
+import React from "react";
 
 const BackOfficer = () => {
-
+    ///////////////////////////////////////////////
+    // get Collector data
     const [Collector, setCollector] = useState([]);
 
     useEffect(() => {
@@ -26,12 +26,42 @@ const BackOfficer = () => {
         );
         setCollector(response.data);
     };
+    ///////////////////////////////////////////////
+    // get Collector data
+    const [Janitor, setJanitor] = useState([]);
 
-    const [Employee, SetEmployee] = useState(EmpDumb);
+    useEffect(() => {
+        getJanitors();
+    }, []);
 
-    const [Vehicle, SetVehicle] = useState(VehicleDumb);
+    const getJanitors = async () => {
+        const response = await axios.get("https://localhost:7271/api/Janitor");
+        setJanitor(response.data);
+    };
+    ///////////////////////////////////////////////
+    // get Vehicle data
+    const [Vehicle, setVehicle] = useState([]);
 
-    const [Mcp, SetMcp] = useState(McpDumb);
+    useEffect(() => {
+        getVehicles();
+    }, []);
+
+    const getVehicles = async () => {
+        const response = await axios.get("https://localhost:7271/api/Vehicle");
+        setVehicle(response.data);
+    };
+    ///////////////////////////////////////////////
+    // get Mcp data
+    const [Mcp, setMcp] = useState([]);
+
+    useEffect(() => {
+        getMcps();
+    }, []);
+
+    const getMcps = async () => {
+        const response = await axios.get("https://localhost:7271/api/MCP");
+        setMcp(response.data);
+    };
 
     return (
         <div>
@@ -39,13 +69,16 @@ const BackOfficer = () => {
             {/* {console.log(Collector[0].name + Collector[0].eId)} */}
             <div className="Body">
                 <Datepicker />
-                <ListDisplay Employee={Employee} Vehicle={Vehicle} Mcp={Mcp} />
+                <ListDisplay
+                    Collector={Collector}
+                    Janitor={Janitor}
+                    Vehicle={Vehicle}
+                    Mcp={Mcp}
+                />
                 <Confirm />
-
             </div>
             <Footer />
         </div>
-    )
-
+    );
 };
 export default BackOfficer;

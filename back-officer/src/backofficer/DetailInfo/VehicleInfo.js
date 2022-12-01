@@ -9,7 +9,7 @@ function VehicleInfo(props) {
                 .filter((veh) => veh.name === props.vehicle)
                 .map((filteredVeh) => {
                     return (
-                        <div key={filteredVeh.name}>
+                        <div key={filteredVeh.id}>
                             <ul className="detailInformation-name__ul">
                                 <li>
                                     <b>Tên phương tiện: </b>
@@ -17,11 +17,11 @@ function VehicleInfo(props) {
                                 </li>
                                 <li>
                                     <b>Biển số xe: </b>
-                                    {filteredVeh.code}
+                                    {filteredVeh.plateNum}
                                 </li>
                                 <li>
                                     <b>Trọng tải: </b>
-                                    {filteredVeh.weight}
+                                    {filteredVeh.capacity}
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
@@ -29,7 +29,7 @@ function VehicleInfo(props) {
                                     <b>Người sử dụng hiện tại: </b>
                                     {!props.edit && (
                                         <div className="detailInformation-name__wrap">
-                                            {filteredVeh.empUsing}
+                                            {filteredVeh.collectorName}
                                         </div>
                                     )}
                                     {props.edit && (
@@ -39,16 +39,18 @@ function VehicleInfo(props) {
                                                 id="vehicle"
                                                 className="custom-select"
                                             >
-                                                {Employee.map((emp) => {
-                                                    return (
-                                                        <option
-                                                            key={emp.name}
-                                                            value={emp.name}
-                                                        >
-                                                            {emp.name}
-                                                        </option>
-                                                    );
-                                                })}
+                                                {props.collectorList.map(
+                                                    (emp) => {
+                                                        return (
+                                                            <option
+                                                                key={emp.name}
+                                                                value={emp.name}
+                                                            >
+                                                                {emp.name}
+                                                            </option>
+                                                        );
+                                                    }
+                                                )}
                                             </select>
                                         </div>
                                     )}
@@ -59,8 +61,8 @@ function VehicleInfo(props) {
                                     <b>Vị trí hiện tại:</b>
                                     {!props.edit && (
                                         <div className="detailInformation-name__wrap">
-                                            <b>{filteredVeh.locationName} </b>{" "}
-                                            {filteredVeh.address}
+                                            <b>{filteredVeh.mcpName} </b>{" "}
+                                            {/*filteredVeh.address*/}
                                         </div>
                                     )}
 
@@ -70,15 +72,15 @@ function VehicleInfo(props) {
                                             id="route"
                                             className="custom-select"
                                         >
-                                            {Mcp.map((rou) => {
+                                            {props.mcpList.map((rou) => {
                                                 return (
                                                     <option
-                                                        key={rou.name}
+                                                        key={rou.id}
                                                         value={rou.name}
                                                     >
                                                         <div>
-                                                            {rou.name}{" "}
-                                                            {rou.address}
+                                                            {rou.name}
+                                                            {/*rou.address*/}
                                                         </div>
                                                     </option>
                                                 );

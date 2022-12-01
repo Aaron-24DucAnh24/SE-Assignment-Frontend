@@ -2,7 +2,7 @@ import React from "react";
 import "./ListDisplay.css";
 import { Card } from "./card";
 
-export const Tab = ({ type, Employee, object }) => {
+export const Tab = ({ type, dataList, object }) => {
     const btnGen = (
         <button className="btnGenerate">
             <span className="btnText">Khởi tạo</span>
@@ -17,11 +17,11 @@ export const Tab = ({ type, Employee, object }) => {
     const tabCon = (
         <div className="tabCard_scroll">
             <div className="tabContainer_scroll">
-                {Employee.map((employee) => {
+                {dataList.map((obj) => {
                     return (
                         <Card
-                            key={employee.name.toString()}
-                            cardProp={employee}
+                            key={obj.id}
+                            cardProp={obj}
                             objectCard={setObject}
                         />
                     );
@@ -33,11 +33,11 @@ export const Tab = ({ type, Employee, object }) => {
     const tabCon2 = (
         <div className="tabCard_scroll">
             <div className="tabContainer_scroll tabContainer_scroll--long ">
-                {Employee.map((employee) => {
+                {dataList.map((obj) => {
                     return (
                         <Card
-                            key={employee.name.toString()}
-                            cardProp={employee}
+                            key={obj.id}
+                            cardProp={obj}
                             objectCard={setObject}
                         />
                     );
