@@ -2,7 +2,6 @@ import Header from "./Header/Header.js";
 import Footer from "./footer/footer.js";
 import CheckIn from "./Btn/Btn.js"
 import CheckOut from "./Btn/Btn.js"
-import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -19,7 +18,7 @@ const Collector = () => {
         <div>
             <div className="background">
                 <Header />
-                <div className="calendar">
+                <div className="calendarCollector">
                     <FullCalendar
                         defaultView="timeGridWeek"
                         header={{

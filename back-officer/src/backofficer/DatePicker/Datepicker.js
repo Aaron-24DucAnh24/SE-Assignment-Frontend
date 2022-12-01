@@ -5,7 +5,7 @@ import "./Datepicker.css"
 
 function Datepicker() {
     const [startDate, setStartDate] = useState(new Date());
-    return (<div className="calendar">
+    return (<div className="datePicker">
         Calendar
         <div className="date">
             <DatePicker
