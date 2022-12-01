@@ -37,6 +37,7 @@ const DetailInfor = (props) => {
                         <CollectorInfo
                             collectorList={props.collector}
                             vehicleList={props.vehicle}
+                            mcpList={props.mcp}
                             employee={props.name}
                             edit={edit}
                         />

@@ -63,57 +63,75 @@ function CollectorInfo(props) {
                                     )}
                                 </li>
                             </ul>
-                            {/*<ul className="detailInformation-name__ul">
-                                <li>
-                                    <b>Tuyến đường:</b>
-                                    <div>
-                                        {filteredEmp.route.map((_route) => {
-                                            return (
-                                                <li key={_route.name}>
-                                                    {!props.edit && (
-                                                        <div className="detailInformation-name__wrap">
-                                                            <b>
-                                                                {_route.name}{" "}
-                                                            </b>{" "}
-                                                            {_route.address}
-                                                        </div>
-                                                    )}
-                                                    {props.edit && (
-                                                        <select
-                                                            name={Mcp.name}
-                                                            id="route"
-                                                            className="custom-select"
-                                                        >
-                                                            {Mcp.map((rou) => {
-                                                                return (
-                                                                    <option
-                                                                        key={
-                                                                            rou.name
+                            {
+                                <ul className="detailInformation-name__ul">
+                                    <li>
+                                        <b>Tuyến đường:</b>
+                                        <div>
+                                            {props.mcpList
+                                                .filter((mcp) => {
+                                                    return (
+                                                        mcp.collectorId ==
+                                                        filteredEmp.id
+                                                    );
+                                                })
+                                                .map((_mcp) => {
+                                                    return (
+                                                        <li key={_mcp.id}>
+                                                            {!props.edit && (
+                                                                <div className="detailInformation-name__wrap">
+                                                                    <b>
+                                                                        {
+                                                                            _mcp.name
+                                                                        }{" "}
+                                                                    </b>{" "}
+                                                                    {
+                                                                        _mcp.address
+                                                                    }
+                                                                </div>
+                                                            )}
+                                                            {props.edit && (
+                                                                <select
+                                                                    name={
+                                                                        Mcp.name
+                                                                    }
+                                                                    id="route"
+                                                                    className="custom-select"
+                                                                >
+                                                                    {props.mcpList.map(
+                                                                        (
+                                                                            mcp
+                                                                        ) => {
+                                                                            return (
+                                                                                <option
+                                                                                    key={
+                                                                                        mcp.id
+                                                                                    }
+                                                                                    value={
+                                                                                        mcp.name
+                                                                                    }
+                                                                                >
+                                                                                    <div>
+                                                                                        {
+                                                                                            mcp.name
+                                                                                        }{" "}
+                                                                                        {
+                                                                                            mcp.address
+                                                                                        }
+                                                                                    </div>
+                                                                                </option>
+                                                                            );
                                                                         }
-                                                                        value={
-                                                                            rou.name
-                                                                        }
-                                                                    >
-                                                                        <div>
-                                                                            {
-                                                                                rou.name
-                                                                            }{" "}
-                                                                            {
-                                                                                rou.address
-                                                                            }
-                                                                        </div>
-                                                                    </option>
-                                                                );
-                                                            })}
-                                                        </select>
-                                                    )}
-                                                </li>
-                                            );
-                                        })}
-                                    </div>
-                                </li>
-                            </ul>
-                            */}
+                                                                    )}
+                                                                </select>
+                                                            )}
+                                                        </li>
+                                                    );
+                                                })}
+                                        </div>
+                                    </li>
+                                </ul>
+                            }
                         </div>
                     );
                 })}
