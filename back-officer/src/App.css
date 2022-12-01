@@ -197,3 +197,8 @@ input::-webkit-credentials-auto-fill-button {
     background-color: var(--color-card-name);
     border-color: var(--color-card-name);
 }
+.calendar {
+    background-color: var(--color-select-tab);
+    margin-top: 60px;
+    font-size: 1.8rem;
+}
