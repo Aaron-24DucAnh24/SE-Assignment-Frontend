@@ -10,8 +10,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "react-router-dom";
 import React from "react";
+import Popup from "../other/Popup.js";
 
 const BackOfficer = () => {
+    // popup
+    const [BtnPopup, setBtnPopup] = useState(false);
+
     ///////////////////////////////////////////////
     // get Collector data
     const [Collector, setCollector] = useState([]);
@@ -35,7 +39,9 @@ const BackOfficer = () => {
     }, []);
 
     const getJanitors = async () => {
-        const response = await axios.get("https://localhost:7271/api/Janitor");
+        const response = await axios.get(
+            "https://localhost:7271/api/Janitor"
+        );
         setJanitor(response.data);
     };
     ///////////////////////////////////////////////
@@ -65,8 +71,8 @@ const BackOfficer = () => {
 
     return (
         <div>
+            <Popup trigger={BtnPopup} setTrigger={setBtnPopup} alertCode={2} />
             <Header />
-            {/* {console.log(Collector[0].name + Collector[0].eId)} */}
             <div className="Body">
                 <Datepicker />
                 <ListDisplay

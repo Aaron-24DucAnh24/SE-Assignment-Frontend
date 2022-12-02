@@ -6,16 +6,16 @@ import Collector from "./collector/Collector.js";
 import Janitor from "./janitor/Janitor.js";
 
 function App() {
-    
+
     return (
         <div>
             <Routes>
                 <Route path="/" element={<Login />} />
-                <Route path = "/back-officer" element={<BackOfficer/>}/>
-                <Route path="/collector" element={<Collector/>}/>
-                <Route path="/janitor" element={<Janitor/>}/>
+                <Route path="/back-officer" element={<BackOfficer />} />
+                <Route path="/collector" element={<Collector />} />
+                <Route path="/janitor" element={<Janitor />} />
             </Routes>
-            
+
         </div>
     );
 }
