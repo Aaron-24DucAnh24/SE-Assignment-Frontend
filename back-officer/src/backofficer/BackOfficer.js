@@ -14,7 +14,7 @@ import Popup from "../other/Popup.js";
 
 const BackOfficer = () => {
     // popup
-    const [BtnPopup, setBtnPopup] = useState(false);
+    const [BtnPopup, setBtnPopup] = useState(0);
 
     ///////////////////////////////////////////////
     // get Collector data
@@ -71,11 +71,12 @@ const BackOfficer = () => {
 
     return (
         <div>
-            <Popup trigger={BtnPopup} setTrigger={setBtnPopup} alertCode={2} />
+            <Popup trigger={BtnPopup} setTrigger={setBtnPopup} />
             <Header />
             <div className="Body">
                 <Datepicker />
                 <ListDisplay
+                    setTrigger={setBtnPopup}
                     Collector={Collector}
                     Janitor={Janitor}
                     Vehicle={Vehicle}

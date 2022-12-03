@@ -2,9 +2,9 @@ import React from "react";
 import "./ListDisplay.css";
 import { Card } from "./card";
 
-export const Tab = ({ type, dataList, object }) => {
+export const Tab = ({ setTrigger ,type, dataList, object }) => {
     const btnGen = (
-        <button className="btnGenerate">
+        <button className="btnGenerate" onClick={()=>{setTrigger(5)}}>
             <span className="btnText">Khởi tạo</span>
         </button>
     );
@@ -47,8 +47,8 @@ export const Tab = ({ type, dataList, object }) => {
     );
     return (
         <div className="tabContainer">
-            {type === "E" ? tabCon : tabCon2}
-            {type === "E" ? btnGen : null}
+            {tabCon}
+            {btnGen}
         </div>
     );
 };
