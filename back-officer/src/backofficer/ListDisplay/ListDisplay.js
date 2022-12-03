@@ -6,7 +6,6 @@ import DetailInfor from "../DetailInfo/DetailInfo";
 const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
     const [objectName, setObjectName] = useState("");
     const [tabType, setTabType] = useState();
-    //const [showTab, showTabHandler] = useState()
 
     const setObjectHandler = (_object) => {
         // pass object to detailInfo
@@ -94,6 +93,7 @@ const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
                 </div>
             </div>
             <DetailInfor
+                setTrigger={setTrigger}
                 type={tabType}
                 name={objectName}
                 collector={Collector}

@@ -71,7 +71,10 @@ const BackOfficer = () => {
 
     return (
         <div>
-            <Popup trigger={BtnPopup} setTrigger={setBtnPopup} />
+            <Popup
+                trigger={BtnPopup}
+                setTrigger={setBtnPopup}
+            />
             <Header />
             <div className="Body">
                 <Datepicker />
@@ -82,7 +85,9 @@ const BackOfficer = () => {
                     Vehicle={Vehicle}
                     Mcp={Mcp}
                 />
-                <Confirm setTrigger={setBtnPopup} />
+                <Confirm
+                    setTrigger={setBtnPopup}
+                />
             </div>
             <Footer />
         </div>
