@@ -15,9 +15,9 @@ function App() {
                 <Route path="/collector" element={<Collector/>}/>
                 <Route path="/janitor" element={<Janitor/>}/>
             </Routes>
-            
         </div>
     );
 }
+
 
 export default App;

@@ -7,11 +7,13 @@ const Header = () => {
     // TODO: Dat
     return (
         <div>
-            <div class="header">
-                <div class="header__wrapper">
-                    <a href="/" class="header__title">UWC 2.0</a>
+            <div className="header">
+                <div className="header_left">
+                    <a href="#" className="header_title">
+                        <span className="title_name">UWC 2.0</span>
+                    </a>
                 </div>
-            </div>
+            </div>    
         </div>
     );
 };
