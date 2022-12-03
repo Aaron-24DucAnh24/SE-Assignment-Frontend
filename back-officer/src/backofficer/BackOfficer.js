@@ -39,9 +39,7 @@ const BackOfficer = () => {
     }, []);
 
     const getJanitors = async () => {
-        const response = await axios.get(
-            "https://localhost:7271/api/Janitor"
-        );
+        const response = await axios.get("https://localhost:7271/api/Janitor");
         setJanitor(response.data);
     };
     ///////////////////////////////////////////////
@@ -69,25 +67,26 @@ const BackOfficer = () => {
         setMcp(response.data);
     };
 
+    const [calendarChange, setCalendarChange] = useState(false);
+
+    const setCalendarChangeHandler = (bool) => {
+        setCalendarChange(bool);
+    };
     return (
         <div>
-            <Popup
-                trigger={BtnPopup}
-                setTrigger={setBtnPopup}
-            />
+            <Popup trigger={BtnPopup} setTrigger={setBtnPopup} />
             <Header />
             <div className="Body">
-                <Datepicker />
+                <Datepicker changeDate={setCalendarChangeHandler} />
                 <ListDisplay
                     setTrigger={setBtnPopup}
                     Collector={Collector}
                     Janitor={Janitor}
                     Vehicle={Vehicle}
                     Mcp={Mcp}
+                    calendarChange={calendarChange}
                 />
-                <Confirm
-                    setTrigger={setBtnPopup}
-                />
+                <Confirm setTrigger={setBtnPopup} />
             </div>
             <Footer />
         </div>

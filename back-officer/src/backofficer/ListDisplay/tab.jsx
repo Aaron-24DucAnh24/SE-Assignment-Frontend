@@ -2,19 +2,17 @@ import React, { useState } from "react";
 import "./ListDisplay.css";
 import { Card } from "./card";
 
-export const Tab = ({ setTrigger, type, dataList, object }) => {
-
+export const Tab = ({ setTrigger, dataList, object, calendarChange }) => {
     const [genBtnClicked, setGenBtnClicked] = useState(false);
     const genBtnClickedHandler = () => {
-        setTrigger(5)
+        setTrigger(5);
         setGenBtnClicked(true);
     };
+
     const btnGen = (
-        <button className="btnGenerate" onClick={
-            genBtnClickedHandler
-        }>
+        <button className="btnGenerate" onClick={genBtnClickedHandler}>
             <span className="btnText">Khởi tạo</span>
-        </button >
+        </button>
     );
 
     const setObject = (objectName) => {
@@ -24,7 +22,7 @@ export const Tab = ({ setTrigger, type, dataList, object }) => {
 
     const tabCon = (
         <div className="tabCard_scroll">
-            {genBtnClicked && (
+            {!calendarChange && genBtnClicked && (
                 <div className="tabContainer_scroll">
                     {dataList.map((obj) => {
                         return (

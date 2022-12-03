@@ -3,7 +3,14 @@ import { Tab } from "./tab";
 import "./ListDisplay.css";
 import DetailInfor from "../DetailInfo/DetailInfo";
 
-const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
+const ListDisplay = ({
+    setTrigger,
+    Collector,
+    Janitor,
+    Vehicle,
+    Mcp,
+    calendarChange,
+}) => {
     const [objectName, setObjectName] = useState("");
     const [tabType, setTabType] = useState();
 
@@ -47,7 +54,6 @@ const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
         );
     };
 
-
     // TODO Phong
     return (
         <div className="tab_contain">
@@ -67,6 +73,7 @@ const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
                             type="E"
                             dataList={Collector}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                         <Tab
                             // props={props.setTrigger}
@@ -74,6 +81,7 @@ const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
                             type="E"
                             dataList={Janitor}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                         <Tab
                             // props={props.setTrigger}
@@ -81,6 +89,7 @@ const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
                             type="V"
                             dataList={Vehicle}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                         <Tab
                             // props={props.setTrigger}
@@ -88,6 +97,7 @@ const ListDisplay = ({ setTrigger, Collector, Janitor, Vehicle, Mcp }) => {
                             type="M"
                             dataList={Mcp}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                     </div>
                 </div>
