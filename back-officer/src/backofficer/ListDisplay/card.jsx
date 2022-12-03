@@ -11,7 +11,7 @@ export const Card = ({ cardProp, objectCard }) => {
     };
 
     const ChangeStatus =
-        cardProp.status === true ? <span id="online">Online</span> : "Offline";
+        cardProp.status === true ? <span id="online">Đang đi làm</span> : "Nghỉ làm";
 
     const IsUsed =
         cardProp.isUsed === true ? (
