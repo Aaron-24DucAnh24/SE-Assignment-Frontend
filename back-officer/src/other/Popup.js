@@ -16,7 +16,7 @@ function Popup(props) {
 
     return (props.trigger != 0) ?
         (
-            <div className='popup'>
+            <div className='popup' >
                 <div className='popupContain'>
                     <closeIcons.IoIosClose className='closeIcon' />
                     <div>

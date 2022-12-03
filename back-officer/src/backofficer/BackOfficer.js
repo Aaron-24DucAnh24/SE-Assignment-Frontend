@@ -82,7 +82,7 @@ const BackOfficer = () => {
                     Vehicle={Vehicle}
                     Mcp={Mcp}
                 />
-                <Confirm />
+                <Confirm setTrigger={setBtnPopup} />
             </div>
             <Footer />
         </div>
