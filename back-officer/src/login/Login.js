@@ -4,6 +4,7 @@ import img2 from "./img/slide3.png"
 import img3 from "./img/slide2.webp"
 import Header from "./Header/Header.js";
 import Footer from "./footer/footer.js";
+import "./slides"
 
 const Login = () => {
     // password witching----------------------------
@@ -27,8 +28,8 @@ const Login = () => {
             passwordIcon.classList.add('fa-eye-slash')
         }
     }
-    return (
 
+    return (
         <div>
             <Header/>
             <div className="body">
@@ -36,7 +37,7 @@ const Login = () => {
                     <div className="authen__wrap">
                         <div className="authen__label">Đăng nhập vào hệ thống</div>
                         <div className="authen__desc">Sử dụng <i>Tên đăng nhập</i> và <i>Mật khẩu</i> được cung cấp</div>
-                        <form method="POST" action="/" className="authen__form">
+                        <form action="/back-officer" className="authen__form">
                             <div className="authen__input-wrap">
                                 <input name="loginName" maxLength="124" type="text" className="authen__input authen__login-name"
                                     placeholder="Tên đăng nhập" />
