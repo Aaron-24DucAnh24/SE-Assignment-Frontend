@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ListDisplay.css";
 import { Card } from "./card";
 
 export const Tab = ({ type, dataList, object }) => {
+    const [genBtnClicked, setGenBtnClicked] = useState(false);
+    const genBtnClickedHandler = () => {
+        setGenBtnClicked(true);
+    };
     const btnGen = (
-        <button className="btnGenerate">
+        <button className="btnGenerate" onClick={genBtnClickedHandler}>
             <span className="btnText">Khởi tạo</span>
         </button>
     );
@@ -16,17 +20,19 @@ export const Tab = ({ type, dataList, object }) => {
 
     const tabCon = (
         <div className="tabCard_scroll">
-            <div className="tabContainer_scroll">
-                {dataList.map((obj) => {
-                    return (
-                        <Card
-                            key={obj.id}
-                            cardProp={obj}
-                            objectCard={setObject}
-                        />
-                    );
-                })}
-            </div>
+            {genBtnClicked && (
+                <div className="tabContainer_scroll">
+                    {dataList.map((obj) => {
+                        return (
+                            <Card
+                                key={obj.id}
+                                cardProp={obj}
+                                objectCard={setObject}
+                            />
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 
@@ -47,8 +53,8 @@ export const Tab = ({ type, dataList, object }) => {
     );
     return (
         <div className="tabContainer">
-            {type === "E" ? tabCon : tabCon2}
-            {type === "E" ? btnGen : null}
+            {tabCon}
+            {btnGen}
         </div>
     );
 };
