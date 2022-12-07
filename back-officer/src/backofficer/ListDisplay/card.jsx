@@ -10,12 +10,16 @@ export const Card = ({ cardProp, objectCard }) => {
         }
     };
 
+    const McpNearFull = cardProp.status >= 80 ?
+        <span id="red">{cardProp.status}%</span> :
+        <span id="green">{cardProp.status}%</span>;
+
     const ChangeStatus =
         cardProp.status === true ? <span id="online">Đang đi làm</span> : "Nghỉ làm";
 
     const IsUsed =
         cardProp.isUsed === true ? (
-            <span id="online">Đang sử dụng</span>
+            <span id="green">Đang sử dụng</span>
         ) : (
             "Khả dụng"
         );
@@ -28,8 +32,8 @@ export const Card = ({ cardProp, objectCard }) => {
                     {typeof cardProp.isUsed == "boolean"
                         ? IsUsed
                         : typeof cardProp.status == "boolean"
-                        ? ChangeStatus
-                        : cardProp.status + "%"}
+                            ? ChangeStatus
+                            : McpNearFull}
                 </div>
                 <infoIcons.RiInformationLine id="iconInfo" />
             </button>

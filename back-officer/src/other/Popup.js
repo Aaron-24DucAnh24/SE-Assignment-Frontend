@@ -18,7 +18,7 @@ function Popup(props) {
         (
             <div className='popup' >
                 <div className='popupContain'>
-                    <closeIcons.IoIosClose className='closeIcon' />
+                    <closeIcons.IoIosClose className='closeIcon' onClick={() => { props.setTrigger(0) }} />
                     <div>
                         <h2>THÔNG BÁO</h2>
                         <span className='popupText'>

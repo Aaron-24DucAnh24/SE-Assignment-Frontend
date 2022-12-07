@@ -197,3 +197,11 @@
     font-size: 28px;
     margin-left: 134px;
 }
+
+#red {
+    color: rgba(255, 0, 0, 0.779);
+}
+
+#green {
+    color: var(--color-online);
+}
