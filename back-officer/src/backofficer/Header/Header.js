@@ -1,7 +1,7 @@
 import "./Header.css";
 import { AiFillMessage } from "react-icons/ai";
-import { BsPersonCircle } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
+import avatar from "../imgs/HungAvatar.jpg";
 
 const Header = ({ setTrigger }) => {
     // TODO: Dat
@@ -14,27 +14,42 @@ const Header = ({ setTrigger }) => {
                     </a>
                 </div>
                 <div className="header_right">
-                    <a onClick={() => {
-                        setTrigger(1);
-                    }} href="#">
+                    <a
+                        onClick={() => {
+                            setTrigger(1);
+                        }}
+                        href="#"
+                    >
                         <IconContext.Provider
                             value={{ className: "message_icons" }}
                         >
                             <AiFillMessage />
                         </IconContext.Provider>
                     </a>
-                    <a onClick={() => {
-                        setTrigger(1);
-                    }} href="#" className="header_title">
+                    <a
+                        onClick={() => {
+                            setTrigger(1);
+                        }}
+                        href="#"
+                        className="header_title"
+                    >
                         <span className="profile_name">Nguyễn Minh Hùng</span>
                     </a>
-                    <a id="last_icons" onClick={() => {
-                        setTrigger(1);
-                    }} href="#">
+                    <a
+                        id="last_icons"
+                        onClick={() => {
+                            setTrigger(1);
+                        }}
+                        href="#"
+                    >
                         <IconContext.Provider
                             value={{ className: "profile_icons" }}
                         >
-                            <BsPersonCircle />
+                            <img
+                                className="avatarImg"
+                                src={avatar}
+                                alt="avatar"
+                            />
                         </IconContext.Provider>
                     </a>
                 </div>
@@ -44,7 +59,7 @@ const Header = ({ setTrigger }) => {
 };
 
 function messageAlert() {
-    alert("This function is being developed!")
-};
+    alert("This function is being developed!");
+}
 
 export default Header;
