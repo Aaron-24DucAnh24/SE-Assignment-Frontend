@@ -92,12 +92,12 @@ ul {
     z-index: 2;
 }
 
-.header__wrapper {
+/* .header__wrapper {
     display: flex;
     width: 1200px;
     max-width: calc(100% - 16px);
     height: 100%;
-}
+} */
 
 .footer {
     display: flex;

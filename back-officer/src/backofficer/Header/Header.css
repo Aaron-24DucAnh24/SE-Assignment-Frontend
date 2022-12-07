@@ -6,10 +6,9 @@
 
 .header_title {
     display: flex;
-    padding: 0 25px;
     height: 55px;
+    padding: 0 25px;
     box-sizing: border-box;
-    margin: 0;
     color: #fff;
     background-color: #6e8bff;
     align-items: center;
@@ -39,8 +38,12 @@
 
 .header_right a {
     display: flex;
-    padding: 0 25px;
+    margin: 0 10px;
     align-items: center;
+}
+
+.header_right #last_icons {
+    margin: 0 25px 0 10px;    
 }
 
 .message_icons {
@@ -52,3 +55,4 @@
     color: #6e8bff;
     font-size: 55px;
 }
+

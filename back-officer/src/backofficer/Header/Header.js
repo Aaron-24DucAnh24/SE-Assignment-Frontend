@@ -14,17 +14,17 @@ const Header = () => {
                     </a>
                 </div>
                 <div className="header_right">
-                    <a href="#">
+                    <a onClick={() => messageAlert()} href="#">
                         <IconContext.Provider
                             value={{ className: "message_icons" }}
                         >
                             <AiFillMessage />
                         </IconContext.Provider>
                     </a>
-                    <a href="#" className="header_title">
+                    <a onClick={() => messageAlert()} href="#" className="header_title">
                         <span className="profile_name">Nguyễn Minh Hùng</span>
                     </a>
-                    <a href="#">
+                    <a id="last_icons" onClick={() => messageAlert()} href="#">
                         <IconContext.Provider
                             value={{ className: "profile_icons" }}
                         >
@@ -35,6 +35,10 @@ const Header = () => {
             </div>
         </div>
     );
+};
+
+function messageAlert() {
+    alert("This function is being developed!")
 };
 
 export default Header;
