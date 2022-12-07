@@ -72,7 +72,7 @@ const BackOfficer = () => {
     return (
         <div>
             <Popup trigger={BtnPopup} setTrigger={setBtnPopup} />
-            <Header />
+            <Header setTrigger={setBtnPopup} />
             <div className="Body">
                 <Datepicker changeDate={setCalendarChangeHandler} />
                 <ListDisplay

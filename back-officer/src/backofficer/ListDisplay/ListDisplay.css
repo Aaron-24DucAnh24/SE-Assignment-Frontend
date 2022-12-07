@@ -1,7 +1,7 @@
 .cardBox {
     background-color: var(--color-white);
     width: 750px;
-    height: 40px;
+    height: 45px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
 .cardStatus {
     display: flex;
     width: 234.61px;
-    height: 39.58px;
+    line-height: 100%;
     display: inline;
     font-family: "Inter";
     font-style: normal;
@@ -91,7 +91,7 @@
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     color: var(--color-main-blue);
 }
 
@@ -194,6 +194,6 @@
 
 #iconInfo {
     color: var(--color-card-name);
-    font-size: 40px;
+    font-size: 28px;
     margin-left: 134px;
 }
