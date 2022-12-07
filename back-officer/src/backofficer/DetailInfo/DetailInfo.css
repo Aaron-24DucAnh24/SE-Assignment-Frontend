@@ -1,6 +1,6 @@
 .detailInformation {
-    height: 612px;
-    width: 450px;
+    height: 510px;
+    width: 400px;
     background-color: #d9eaff;
     float: left;
     margin-left: 20px;
@@ -30,7 +30,7 @@
     background-color: #ffffff;
     width: 350px;
     border-radius: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
     color: rgb(110, 139, 255);
@@ -47,8 +47,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-right: 10px;
 }
 
@@ -60,12 +60,10 @@
     margin-left: 5px;
 }
 
-.hightlight{
+.hightlight {
     margin-left: 5px;
     cursor: pointer;
 }
-.hightlight:hover
-{
+.hightlight:hover {
     color: var(--color-card-name);
-
 }

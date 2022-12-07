@@ -10,8 +10,8 @@ export const Tab = ({ setTrigger, dataList, object, calendarChange }) => {
     };
 
     const btnGen = (
-        <button className="btnGenerate" onClick={genBtnClickedHandler}>
-            <span className="btnText">Khởi tạo</span>
+        <button className="buttonForGenerate" onClick={genBtnClickedHandler}>
+            <span className="buttonText">Khởi tạo</span>
         </button>
     );
 
