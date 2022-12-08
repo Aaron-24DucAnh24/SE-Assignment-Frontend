@@ -3,15 +3,16 @@ import Header from "./Header/Header.js";
 import Confirm from "./Confirm/btnConfirm";
 import ListDisplay from "./ListDisplay/ListDisplay.js";
 import Footer from "./footer/footer.js";
-import EmpDumb from "./Data/EmpDumb.json";
-import McpDumb from "./Data/McpDumb.json";
-import VehicleDumb from "./Data/VehicleDumb.json";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "react-router-dom";
 import React from "react";
+import Popup from "../other/Popup.js";
 
 const BackOfficer = () => {
+    // popup
+    const [BtnPopup, setBtnPopup] = useState(0);
+
     ///////////////////////////////////////////////
     // get Collector data
     const [Collector, setCollector] = useState([]);
@@ -63,19 +64,26 @@ const BackOfficer = () => {
         setMcp(response.data);
     };
 
+    const [calendarChange, setCalendarChange] = useState(false);
+
+    const setCalendarChangeHandler = (bool) => {
+        setCalendarChange(bool);
+    };
     return (
         <div>
-            <Header />
-            {/* {console.log(Collector[0].name + Collector[0].eId)} */}
+            <Popup trigger={BtnPopup} setTrigger={setBtnPopup} />
+            <Header setTrigger={setBtnPopup} />
             <div className="Body">
-                <Datepicker />
+                <Datepicker changeDate={setCalendarChangeHandler} />
                 <ListDisplay
+                    setTrigger={setBtnPopup}
                     Collector={Collector}
                     Janitor={Janitor}
                     Vehicle={Vehicle}
                     Mcp={Mcp}
+                    calendarChange={calendarChange}
                 />
-                <Confirm />
+                <Confirm setTrigger={setBtnPopup} />
             </div>
             <Footer />
         </div>

@@ -21,14 +21,26 @@ function passwordSwitch() {
     } else {
         passwordInput.type = 'password'
     }
-
-    if (passwordIcon.classList.contains('fa-eye-slash')) {
-        passwordIcon.classList.remove('fa-eye-slash')
-        passwordIcon.classList.add('fa-eye')
-    } 
-    
-    else {
-        passwordIcon.classList.remove('fa-eye')
-        passwordIcon.classList.add('fa-eye-slash')
-    }
 }
+
+// redirect
+
+var password = ''
+var loginName = ''
+var btn = document.querySelector('.authen__btn')
+
+document.querySelector('.authen__password').oninput = () => {
+    password = document.querySelector('.authen__password').value
+}
+document.querySelector('.authen__login-name').oninput = () => {
+    loginName = document.querySelector('.authen__login-name').value
+}
+
+btn.addEventListener('click', (e) => {
+    if(password == '123' && loginName == 'tiendat') {
+        btn.href = 'collector.html'
+    }
+    else if (password == '123' && loginName == 'ducanh') {
+        btn.href = 'janitor.html'
+    }
+})

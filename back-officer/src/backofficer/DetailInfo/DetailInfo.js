@@ -9,6 +9,9 @@ import React, { useState } from "react";
 const DetailInfor = (props) => {
     const [edit, setEdit] = useState(false);
     const onEditClickHandler = () => {
+        if (edit) {
+            props.setTrigger(2);
+        }
         setEdit(!edit);
     };
 

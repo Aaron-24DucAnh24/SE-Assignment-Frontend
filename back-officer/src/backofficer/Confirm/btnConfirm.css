@@ -1,27 +1,28 @@
-.btnGenerate {
-    width: 226px;
-    height: 60px;
+.buttonForConfirm {
+    width: 200px;
+    height: 50px;
     background: rgba(0, 255, 178, 0.55);
     border-radius: 50px;
 }
 
-.btnText:hover {
-    opacity: 0.5;
+.buttonForConfirm:hover {
+    opacity: 1;
 }
 
-.btnText {
+.buttonText {
     width: 100%;
     font-family: "Inter";
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 20px;
     color: var(--color-main-blue);
     cursor: pointer;
 }
 
-.centerBtn {
-    float: none;
-    margin-left: 250px;
-    margin-top: 660px;
+.centerButton {
+    float: left;
+    margin-top: 20px;
+    margin-left: 650px;
+    margin-right: auto;
     padding-bottom: 20px;
 }

@@ -1,0 +1,197 @@
+
+/* body css */
+/* ///////////////////////////////////////// */
+
+.body {
+    display: flex;
+    justify-self: center;
+    width: 1200px;
+    max-width: calc(100% - 16px);
+    height: 650px;
+    box-shadow: 0 0 5px rgb(64, 64, 80);
+    margin-top: 70px;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: contain;
+}
+
+.authen-section, .slider-section {
+    width: 50%;
+    height: 100%;
+}
+
+.authen-section {
+    background-color: var(--primary-color-1);
+}
+
+.authen__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 28px 28px;
+}
+
+.authen__label {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.authen__desc {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #fff;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px #fff solid;
+}
+
+.authen__desc i {
+    color: rgb(136, 255, 0);
+    font-weight: 600;
+}
+
+.authen__input-wrap {
+    margin-bottom: 32px;
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.authen__input-wrap--password {
+    position: relative;
+}
+
+.authen__input-icon {
+    opacity: 0.6;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 2.5rem;
+}
+
+.authen__input {
+    height: 100%;
+    width: inherit;
+    padding: 6px 12px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.authen__input::placeholder {
+    color: rgba(117,117,117,0.8);
+}
+
+.authen__input:focus {
+    outline: none !important;
+    border: 1px black solid;
+    box-shadow: 0 0 5px black;
+}
+
+.authen__btn {
+    text-align: center;
+    line-height: 60px;
+    width: 60%;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    background-color: rgb(136, 255, 0);
+    color: var(--primary-color-1);
+    font-weight: 600;
+    box-shadow: 0 5px 5px #333;
+}
+
+.authen__btn:hover {
+    opacity: 0.8;
+}
+
+.slider-section {
+    background-color: var(--primary-color-2);
+    display: flex;
+    align-items: center;
+}
+
+.slide {
+    display: block;
+    width: 100%;
+    animation: fadeIn 0.7s;
+}
+
+/* Tablet css */
+@media screen and (min-width: 741px) and (max-width: 1023px){
+    .header__wrapper {
+        justify-content: center;
+    }
+
+    .body{
+        width: calc(100% - 18px);
+    }
+   
+    .authen-section {
+        flex: 1;
+    }
+
+    .slider-section {
+        display: none;
+    }
+
+    .contact-item {
+        line-height: 1.8;
+    }
+}
+
+/* Mobile css */
+@media screen and (max-width: 740px) {
+    .header__wrapper {
+        justify-content: center;
+    }
+
+    .body{
+        width: calc(100% - 18px);
+    }
+   
+    .authen__wrap {
+        padding: 16px;
+    }
+
+    .authen-section {
+        flex: 1;
+    }
+
+    .slider-section {
+        display: none;
+    }
+
+    .authen__btn {
+        width: 100%;
+    }
+
+    .contact-item {
+        line-height: 1.8;
+    }
+
+    .authen__label {
+        font-size: 2.5rem;
+    }
+
+    .authen__desc {
+        font-size: 1.2rem;
+    }
+
+    .authen__input {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .authen__input-icon {
+        height: 40px;
+        width: 40px;
+    }
+}

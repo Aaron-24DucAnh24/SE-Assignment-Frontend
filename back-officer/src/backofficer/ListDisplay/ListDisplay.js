@@ -3,10 +3,16 @@ import { Tab } from "./tab";
 import "./ListDisplay.css";
 import DetailInfor from "../DetailInfo/DetailInfo";
 
-const ListDisplay = ({ Collector, Janitor, Vehicle, Mcp }) => {
+const ListDisplay = ({
+    setTrigger,
+    Collector,
+    Janitor,
+    Vehicle,
+    Mcp,
+    calendarChange,
+}) => {
     const [objectName, setObjectName] = useState("");
     const [tabType, setTabType] = useState();
-    //const [showTab, showTabHandler] = useState()
 
     const setObjectHandler = (_object) => {
         // pass object to detailInfo
@@ -60,33 +66,44 @@ const ListDisplay = ({ Collector, Janitor, Vehicle, Mcp }) => {
                         <TabBtn tabName="Phương tiện" index="2" />
                         <TabBtn tabName="Mcp" index="3" />
                     </div>
-
                     <div className="tabBody">
                         {/* Tab body */}
                         <Tab
+                            setTrigger={setTrigger}
                             type="E"
                             dataList={Collector}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                         <Tab
+                            // props={props.setTrigger}
+                            setTrigger={setTrigger}
                             type="E"
                             dataList={Janitor}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                         <Tab
+                            // props={props.setTrigger}
+                            setTrigger={setTrigger}
                             type="V"
                             dataList={Vehicle}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                         <Tab
+                            // props={props.setTrigger}
+                            setTrigger={setTrigger}
                             type="M"
                             dataList={Mcp}
                             object={setObjectHandler}
+                            calendarChange={calendarChange}
                         />
                     </div>
                 </div>
             </div>
             <DetailInfor
+                setTrigger={setTrigger}
                 type={tabType}
                 name={objectName}
                 collector={Collector}

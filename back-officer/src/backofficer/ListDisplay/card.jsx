@@ -1,7 +1,6 @@
 import "./ListDisplay.css";
 import * as infoIcons from "react-icons/ri";
 
-
 export const Card = ({ cardProp, objectCard }) => {
     // TODO Tuan
     const ShowDetail = () => {
@@ -11,22 +10,18 @@ export const Card = ({ cardProp, objectCard }) => {
         }
     };
 
+    const McpNearFull = cardProp.status >= 80 ?
+        <span id="red">{cardProp.status}%</span> :
+        <span id="green">{cardProp.status}%</span>;
+
     const ChangeStatus =
-        (
-            cardProp.status === true ? (
-                <span id="online">Online</span>
-            ) : (
-                "Offline"
-            )
-        );
+        cardProp.status === true ? <span id="online">Đang đi làm</span> : "Nghỉ làm";
 
     const IsUsed =
-        (
-            cardProp.isUsed === true ? (
-                <span id="online">Đang sử dụng</span>
-            ) : (
-                "Khả dụng"
-            )
+        cardProp.isUsed === true ? (
+            <span id="green">Đang sử dụng</span>
+        ) : (
+            "Khả dụng"
         );
 
     return (
@@ -34,7 +29,11 @@ export const Card = ({ cardProp, objectCard }) => {
             <button className="cardBox" onClick={ShowDetail}>
                 <div className="cardName">{cardProp.name}</div>
                 <div className="cardStatus">
-                    {typeof (cardProp.isUsed) == 'boolean' ? (IsUsed) : (typeof (cardProp.status) == 'boolean' ? (ChangeStatus) : cardProp.status + "%")}
+                    {typeof cardProp.isUsed == "boolean"
+                        ? IsUsed
+                        : typeof cardProp.status == "boolean"
+                            ? ChangeStatus
+                            : McpNearFull}
                 </div>
                 <infoIcons.RiInformationLine id="iconInfo" />
             </button>

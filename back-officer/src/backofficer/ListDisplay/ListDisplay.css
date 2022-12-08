@@ -1,9 +1,7 @@
-
-
 .cardBox {
     background-color: var(--color-white);
-    width: 884px;
-    height: 88px;
+    width: 750px;
+    height: 45px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -20,11 +18,11 @@
 .cardName {
     display: flex;
     /* align-items: center; */
-    width: 410px;
+    width: 250px;
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 16px;
     text-transform: uppercase;
     line-height: 130%;
     color: var(--color-card-name);
@@ -34,13 +32,15 @@
 .cardStatus {
     display: flex;
     width: 234.61px;
-    height: 39.58px;
+    line-height: 100%;
     display: inline;
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 130%;
+    margin-left: 0px;
+
     /* or 31px */
 
     color: var(--color-offline);
@@ -53,17 +53,18 @@
     margin-left: 134px;
 }
 
-.tab_contain{
+.tab_contain {
     display: block;
 }
 
 /* Tab Section */
 .tab_Background {
-    width: 1034px;
-    height: 612px;
+    width: 850px;
+    height: 510px;
     background-color: var(--color-main-blue);
-    border-radius: 10px;
+    border-radius: 15px;
     float: left;
+    margin-left: 125px;
 }
 
 /* Navigation bar */
@@ -72,12 +73,9 @@
     padding-left: 26px;
 }
 
-.tabNav {
-}
-
 .tabNav_Btn {
-    width: 218px;
-    height: 54px;
+    width: 180px;
+    height: 40px;
     background-color: var(--color-select-tab);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -90,19 +88,20 @@
 
 /* Navigation name */
 .tabNav_name {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     color: var(--color-main-blue);
 }
 
 /* A tab (Ex: Nhân Viên thu gom) */
 .tabContainer {
-    width: 964px;
-    height: 486px;
+    /*Background of a tab (cái màu nhạt)*/
+    width: 800px;
+    height: 400px;
     background-color: var(--color-select-tab);
-    border-radius: 10px;
+    border-radius: 15px;
     border-top-left-radius: 0px;
     display: none;
 }
@@ -111,7 +110,7 @@
 /* Create scroll */
 .tabContainer_scroll {
     /* From left margin left card box */
-    width: 948px;
+    width: 800px;
     /*include 16 scroll bar*/
     height: 306px;
     background-color: var(--color-select-tab);
@@ -125,12 +124,30 @@
 
 /* Bring Card and scroll down to 56px */
 .tabCard_scroll {
-    padding-top: 54px;
+    padding-top: 20px;
+}
+
+.buttonForGenerate {
+    width: 180px;
+    height: 50px;
+
+    background: rgba(0, 255, 178, 0.55);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: none;
+    /* transform: translateX(100%); */
+    right: 100%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btnGenerate {
-    width: 226px;
-    height: 60px;
+    /*Không sửa được, có thể đã bị ghi đè đâu đó*/
+    width: 0px;
+    height: 0px;
 
     background: rgba(0, 255, 178, 0.55);
     border-radius: 50px;
@@ -148,12 +165,24 @@
     opacity: 0.5;
 }
 
-.btnText {
+.buttonText {
+    /*Không hoạt động*/
     width: 100%;
     font-family: "Inter";
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 25px;
+    color: var(--color-main-blue);
+    cursor: pointer;
+}
+
+.btnText {
+    /*Không hoạt động*/
+    width: 100%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
     color: var(--color-main-blue);
     cursor: pointer;
 }
@@ -163,8 +192,16 @@
     color: var(--color-online);
 }
 
-#iconInfo{
+#iconInfo {
     color: var(--color-card-name);
-    font-size: 40px;
+    font-size: 28px;
     margin-left: 134px;
+}
+
+#red {
+    color: rgba(255, 0, 0, 0.779);
+}
+
+#green {
+    color: var(--color-online);
 }

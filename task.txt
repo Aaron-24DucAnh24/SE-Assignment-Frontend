@@ -1,0 +1,13 @@
+1. Hiện ẩn route, xe, người,...                                 (Tuấn)
+2. Log in (tạo acc admin, collector, janitor) 			    (Đạt)
+[X] 3. Hiện popup cập nhật thành công thành công           (pop up) (Phong)
+4. Calendar -> ngày mới->hide->khởi tạo->show->online           (Tuấn)
+5. Online, offline -> vietnam                                   (Hùng)
+6. bấm khởi tạo thì online (người, phương tiện)                 (Tuấn)
+7. mcp ban đầu 0% -> khởi tạo 20, 40, 60...                     (Tuấn)
+8. bấm vào message, tên, avatar->"đang phát triển" (pop-up) (alert) (Đạt)
+11. Sửa 2 cái button vô giữa                                    (Hùng)
+[X] 12. Edit thông tin -> cập nhật thành công          (pop up)     (Phong)
+13. Chỉnh ảnh login chạy giựt giựt 				   	    (ĐỨC ANH!!!!!!!!)
+
+DEADLINE: Tối mai

@@ -1,9 +1,9 @@
 import "./Header.css";
 import { AiFillMessage } from "react-icons/ai";
-import { BsPersonCircle } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
+import avatar from "../imgs/HungAvatar.jpg";
 
-const Header = () => {
+const Header = ({ setTrigger }) => {
     // TODO: Dat
     return (
         <div>
@@ -14,21 +14,42 @@ const Header = () => {
                     </a>
                 </div>
                 <div className="header_right">
-                    <a onClick={() => messageAlert()} href="#">
+                    <a
+                        onClick={() => {
+                            setTrigger(1);
+                        }}
+                        href="#"
+                    >
                         <IconContext.Provider
                             value={{ className: "message_icons" }}
                         >
                             <AiFillMessage />
                         </IconContext.Provider>
                     </a>
-                    <a onClick={() => messageAlert()} href="#" className="header_title">
+                    <a
+                        onClick={() => {
+                            setTrigger(1);
+                        }}
+                        href="#"
+                        className="header_title"
+                    >
                         <span className="profile_name">Nguyễn Minh Hùng</span>
                     </a>
-                    <a id="last_icons" onClick={() => messageAlert()} href="#">
+                    <a
+                        id="last_icons"
+                        onClick={() => {
+                            setTrigger(1);
+                        }}
+                        href="#"
+                    >
                         <IconContext.Provider
                             value={{ className: "profile_icons" }}
                         >
-                            <BsPersonCircle />
+                            <img
+                                className="avatarImg"
+                                src={avatar}
+                                alt="avatar"
+                            />
                         </IconContext.Provider>
                     </a>
                 </div>
@@ -38,7 +59,7 @@ const Header = () => {
 };
 
 function messageAlert() {
-    alert("This function is being developed!")
-};
+    alert("This function is being developed!");
+}
 
 export default Header;

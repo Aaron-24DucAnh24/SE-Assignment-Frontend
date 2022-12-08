@@ -1,12 +1,11 @@
-
-.date{
-    color:var(--color-main-blue) ;
+.date {
+    color: var(--color-main-blue);
     font-size: 1.5rem;
     margin-top: 7px;
     cursor: pointer;
 }
 
-.datePicker{
+.datePicker {
     display: flex;
     justify-content: center;
     height: 40px;
@@ -17,12 +16,15 @@
     color: var(--color-main-blue);
     font-size: 2.4rem;
     font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
 }
 
-.react-datepicker-wrapper .react-datepicker__input-container{
+.react-datepicker-wrapper .react-datepicker__input-container {
     margin-left: 20px;
 }
-.react-datepicker-wrapper .react-datepicker__input-container input{
+.react-datepicker-wrapper .react-datepicker__input-container input {
     height: 26px;
     background-color: var(--color-deselect-tab);
     border-radius: 5px;
