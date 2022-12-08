@@ -1,0 +1,279 @@
+
+.header__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 2px;
+}
+
+.header__name {
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 6px 12px;
+    font-size: 1.5rem;
+    color: var(--primary-color-1);
+}
+
+.header__chat {
+    color: var(--primary-color-1);
+    font-size: 4rem;
+    padding: 6px 24px;
+    position: fixed;
+    bottom: 60px;
+    right: 16px;
+    z-index: 999;
+}
+
+.header__chat:hover {
+    opacity: 0.8;
+}
+
+.header__pic {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+}
+
+/* CALENDAR */
+
+.container {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+.calendar {
+    background: var(--primary-color-1);
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    height: 501px;
+    transition: .9s;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+/* Front - Calendar */
+.front {
+    transform: rotateY(0deg);  
+    animation: fadeIn ease-in 0.3s;
+}
+
+.current-date {
+    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.week-days {
+    color: #dfebed;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 30px 40px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.weeks {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.weeks div {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 300;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.past-day {
+    opacity: .3;
+}
+
+.weeks span {
+    padding: 10px;
+}
+
+.active {
+    background: #f78536;
+    border-radius: 50%;
+}
+
+.processing {
+    background: greenyellow;
+    border-radius: 50%;
+    color: var(--primary-color-1);
+}
+
+.finished {
+    background: blue;
+    border-radius: 50%;
+    color: white;
+}
+
+.weeks span:not(.last-month):hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.off-date {
+    position: relative;
+}
+
+.off-date:after {
+    content: '•';
+    color: #f78536;
+    font-size: 1.4em;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+
+/* Back - Event form */
+
+.back {
+    height: 100%;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.info {
+    color: #dfebed;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 4px
+}
+
+.infomcp {
+    color: #dfebed;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 4px
+}
+
+.infomcp div {
+    padding: 6px;
+    font-size: 1.5rem;
+}
+
+
+.info div {
+    padding: 6px;
+    font-size: 1.5rem;
+}
+
+.actions {
+    bottom: 0;
+    border-top: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+}
+
+.action-btn {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 30px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.actions button:hover {
+    background: #497285;
+    cursor: pointer;
+}
+
+.actions button:active {
+    background: #5889a0;
+    outline: none;
+}
+
+.none {
+    display: none !important;
+}
+
+.mcp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #fff;
+    height: 70px;
+    margin: 4px;
+    border-radius: 5px;
+    align-items: center;
+    position: relative;
+}
+
+.mcp-faded {
+    opacity: 0.6;
+}
+
+.mcp-info {
+    color: var(--primary-color-1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+} 
+
+.mcp-info div {
+    padding: 0;
+}
+
+.mcp-btn {
+    background-color: var(--primary-color-1);
+    color: #fff;
+    border: silver 1px solid;
+    box-shadow: silver;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: absolute;
+    right: 8px;
+}
+
+.mcp-num {
+    background-color: var(--primary-color-1);
+    border-radius: 50%;
+    color: #fff;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../../back-officer/public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__wrapper">
+                <a href="login.html" class="header__tittle">UWC 2.0</a>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="authen-section">
+                <div class="authen__wrap">
+                    <div class="authen__label">Đăng nhập vào hệ thống</div>
+                    <div class="authen__desc">Sử dụng <i>Tên đăng nhập</i> và <i>Mật khẩu</i> được cung cấp</div>
+                    <div class="authen__input-wrap">
+                        <input maxlength="124" type="text" class="authen__input authen__login-name" placeholder="Tên đăng nhập" required>
+                    </div>
+                    <div class="authen__input-wrap authen__input-wrap--password">
+                        <input type="password" maxlength="16" class="authen__input authen__password" placeholder="Mật khẩu" required>
+                        <label class="authen__input-icon clickable" for="password-swicher"><span class="password-icon"></span>👀</label>
+                        <input type="checkbox" id="password-swicher" style="display: none;" onclick="passwordSwitch()">
+                    </div>
+                    <a class="authen__btn clickable" href="">Đăng nhập</a>
+                </div>
+            </div>
+            <div class="slider-section">
+                <img src="../img/slide1.png" alt="" class="slide">
+                <img src="../img/slide2.webp" alt="" class="slide">
+                <img src="../img/slide3.png" alt="" class="slide">
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact footer__section">
+                <span >Liên hệ</span>
+                <ul class="contact-list">
+                    <li class="contact-item"><i class="ti-location-pin"></i>Địa chỉ: 268 Lý Thường Kiệt, P.14, Q.10, TP.HCM</li>
+                    <li class="contact-item"><i class="ti-mobile"></i>Phone: <a href="tel: 0964778339">0964.778.339</a></li>
+                    <li class="contact-item"><i class="ti-email"></i>Email: <a href="mailto: anh.bui24ducanh24@hcmut.edu.vn">anh.bui24ducanh24@hcmut.edu.vn</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <span>Powered by <i>Simp(le) <br> </i>Ho Chi Minh University of Technology</span>
+                <img src="../../back-officer/public/favicon.ico" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

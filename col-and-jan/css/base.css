@@ -1,0 +1,169 @@
+:root {
+    /* --primary-color-1: rgb(110,139,255); */
+    --primary-color-2: rgb(232,237,245);
+    --primary-color-1: #2b4450;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: inherit;
+    line-height: 1.5;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clickable {
+    cursor: pointer !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    background-color: rgb(245,245,249);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 4px silver;
+    z-index: 999;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    max-width: calc(100% - 16px);
+    height: 100%;
+}
+
+.header__tittle {
+    display: flex;
+    align-items: center;
+    width: 145px;
+    height: 100%;
+    color: #fff;
+    font-size: 2.0rem;
+    padding: 6px 24px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(64 64 80);
+    font-weight: 700;
+    letter-spacing: 2px;
+    background-color: var(--primary-color-1);
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 2px;
+}
+
+.header__item {
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 6px 24px;
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(232,237,245);
+    box-shadow: 0 0 4px silver;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.university, .contact, .footer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__section span {
+    padding: 16px 0 6px 0;
+    color: rgb(102,102,102);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.footer__section span i {
+    color: var(--primary-color-1);
+    font-weight: 700;
+}
+
+.footer__section img{
+    width: 120px;
+}
+
+.footer__section li a,
+.footer__section li {
+    font-size: 1.5rem;
+    color: rgb(102,102,102);
+}
+
+.footer__section li a{
+    cursor: pointer;
+}
+
+.footer__section li a:hover{
+    color: blue;
+}
+
+.footer__section li i{
+    padding-right: 6px;
+}
+
+.contact {
+    padding-bottom: 16px;
+    border-bottom: 1px #333 solid;
+}
+
+input::-webkit-contacts-auto-fill-button, 
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
