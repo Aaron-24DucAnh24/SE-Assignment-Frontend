@@ -39,14 +39,6 @@ const Login = () => {
         } else {
             passwordInput.type = "password";
         }
-
-        if (passwordIcon.classList.contains("fa-eye-slash")) {
-            passwordIcon.classList.remove("fa-eye-slash");
-            passwordIcon.classList.add("fa-eye");
-        } else {
-            passwordIcon.classList.remove("fa-eye");
-            passwordIcon.classList.add("fa-eye-slash");
-        }
     };
 
     return (
@@ -91,7 +83,7 @@ const Login = () => {
                                     className="authen__input-icon clickable"
                                     htmlFor="password-swicher"
                                 >
-                                    <i className="fa-solid fa-eye-slash password-icon"></i>
+                                    👀
                                 </label>
                                 <input
                                     type="checkbox"
