@@ -25,7 +25,11 @@ function JanitorInfo(props) {
                                 </li>
                                 <li>
                                     <b>Trạng thái: </b>
-                                    {filteredEmp.status}
+                                    {filteredEmp.status === true ? (
+                                        <span>Đang đi làm</span>
+                                    ) : (
+                                        "Nghỉ làm"
+                                    )}
                                 </li>
                             </ul>
                             <ul className="detailInformation-name__ul">
