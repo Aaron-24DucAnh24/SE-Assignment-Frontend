@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ListDisplay.css";
 import { Card } from "./card";
 
-export const Tab = ({ setTrigger, dataList, object, calendarChange }) => {
+export const Tab = ({ type, setTrigger, dataList, object, calendarChange }) => {
     const [genBtnClicked, setGenBtnClicked] = useState(false);
     const genBtnClickedHandler = () => {
         setTrigger(5);
@@ -55,8 +55,8 @@ export const Tab = ({ setTrigger, dataList, object, calendarChange }) => {
     );
     return (
         <div className="tabContainer">
-            {tabCon}
-            {btnGen}
+            {type === "E" ? tabCon : tabCon2}
+            {type === "E" ? btnGen : null}
         </div>
     );
 };
