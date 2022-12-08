@@ -10,22 +10,23 @@ import { useState } from "react";
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [link, setLink] = useState("/");
+
+    const account = { acc: "admin", pass: "123456" };
 
     const UsernameHandler = (event) => {
         setUsername(event.target.value);
-        console.log("value is:", event.target.value);
-        console.log(username);
     };
 
     const PasswordHandler = (event) => {
         setPassword(event.target.value);
-        console.log("value is:", event.target.value);
-        console.log(password);
     };
 
     const LoginHandler = () => {
-        if (username === password && username === "backofficer") {
-            console.log("login as backofficer");
+        if (username === account.acc && password === account.pass) {
+            setLink("/back-officer");
+        } else {
+            setLink("/");
         }
     };
 
@@ -96,7 +97,7 @@ const Login = () => {
                                 className="authen__btn clickable"
                                 onClick={LoginHandler}
                             >
-                                <a href="/back-officer">Đăng nhập</a>
+                                {<a href={link}>Đăng nhập</a>}
                             </button>
                         </form>
                     </div>
