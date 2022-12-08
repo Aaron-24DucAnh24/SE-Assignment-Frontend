@@ -15,16 +15,16 @@
 }
 
 .title_name {
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-style: normal;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
 }
 
 .profile_name {
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-style: normal;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
 }
 

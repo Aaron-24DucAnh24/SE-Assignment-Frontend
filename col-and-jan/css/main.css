@@ -204,12 +204,12 @@
 }
 
 .actions button:hover {
-    background: #497285;
+    opacity: 0.7;
     cursor: pointer;
 }
 
 .actions button:active {
-    background: #5889a0;
+    background: var(--primary-color-1);
     outline: none;
 }
 
